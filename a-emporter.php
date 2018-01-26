@@ -50,12 +50,12 @@ wp_insert_post($location_post);
 
 <div class="globale-title1" style="  
 ">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/solunch-food.png" style="width: 150px;
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/solunch-food.png" style="width: 120px;
     border-bottom: 2px solid;
     position: absolute;
     bottom: -32px;
     transform: translate(-50%);
-    left: 50%;"> 
+    left: 50%; border:2px solid; border-radius:50px; padding: 10px;"> 
 </div>    
 
 <form action="<?php echo the_permalink();?>" method="post" style="position: relative;top: 90px;">
