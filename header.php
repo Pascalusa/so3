@@ -70,7 +70,7 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
                     <ul id="" class="right hide-on-med-and-down " style="float: right!important; font-family: 'Muli', sans-serif;">
                       <div class="commander-en-ligne">
                       <!-- https://solunch.fr/commander-en-ligne/ -->
-                          <li><a href="http://localhost/wordpress-so/index.php/commander-en-ligne/"><span style="border: 2px solid #abd3a7; padding: 8px;">Commander en ligne</span></a></li> 
+                          <li><a href=" http://so-lunch-usapascal366265.codeanyapp.com/commander-en-ligne/"><span style="border: 2px solid #abd3a7; padding: 8px;">Commander en ligne</span></a></li> 
                          <!-- <li><a href="https://solunch.fr/commander-en-ligne/"><span style="border: 2px solid #abd3a7; padding: 8px;">Commander en ligne</span></a></li> -->
                       </div>   
                     </ul>

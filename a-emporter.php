@@ -208,34 +208,34 @@ wp_insert_post($location_post);
     top: 96px;">
 
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(12);?>' class="tooltipped"><!-- <h6 style="text-align: center;">base</h6> -->
+                    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><!-- <h6 style="text-align: center;">base</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
 
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Veggies</h6> -->
+                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(2);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Veggies</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
                   <div class="tab col  s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped" >
+                    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped" >
                     <!-- proteine -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px;top: 15px;position: relative;right: 10px;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7;  height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les graines et les Noix</h6> -->
+                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les graines et les Noix</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(9);?>' class="tooltipped" ><!-- <h6 style="text-align: center;">Les plus</h6> -->
+                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped" ><!-- <h6 style="text-align: center;">Les plus</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(10);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Assaisonnements  <span style="position: relative; top: 25px;
+                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Assaisonnements  <span style="position: relative; top: 25px;
                     right: 145px;">Boissons & Smooties</span></h6>  -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
                   <div class="col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(11);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Desserts</h6> -->
+                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Desserts</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
               </div>     
@@ -251,26 +251,26 @@ wp_insert_post($location_post);
                 <ul class="row emporter-mobile" style="">
                 <!-- base -->
                   <li class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g0"><?php  echo get_cat_name(9);?></a></li>
+                  text-align: center;"><a href="#g0"><?php  echo get_cat_name(1);?></a></li>
                   <!-- veggies -->
                   <li class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g1"><?php  echo get_cat_name(1);?></a></li>
+                  text-align: center;"><a href="#g1"><?php  echo get_cat_name(2);?></a></li>
                   <div class="divider"></div>
                   <!-- proteine -->
                   <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g2"><?php  echo get_cat_name(2);?></a></li>
+                  text-align: center;"><a href="#g2"><?php  echo get_cat_name(3);?></a></li>
                   <div class="divider"></div>
                   <!-- graines -->
                   <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g3"><?php  echo get_cat_name(3);?></a></li>
+                  text-align: center;"><a href="#g3"><?php  echo get_cat_name(4);?></a></li>
                   <div class="divider"></div>
                   <!-- pluss -->
                   <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g4"><?php  echo get_cat_name(4);?></a></li>
+                  text-align: center;"><a href="#g4"><?php  echo get_cat_name(5);?></a></li>
                   <div class="divider"></div>
                   <!-- boisson smoothie -->
                   <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g5"><?php  echo get_cat_name(5);?></a></li>
+                  text-align: center;"><a href="#g5"><?php  echo get_cat_name(6);?></a></li>
                   <div class="divider"></div>
                   <!-- dessert -->
                  <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
@@ -311,7 +311,7 @@ wp_insert_post($location_post);
          <?php
    // <!-- debut loop base -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 12,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 1,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -352,7 +352,7 @@ wp_insert_post($location_post);
          <?php
    // <!-- debut loop veggies -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 3,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 2,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -394,7 +394,7 @@ wp_insert_post($location_post);
          <!-- debut loop proteine -->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 1,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 3,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -436,7 +436,7 @@ wp_insert_post($location_post);
           <!-- debut loop graineset noix-->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 8,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 4,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -486,7 +486,7 @@ wp_insert_post($location_post);
            <!-- debut loop les plus -->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 9,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 5,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -530,7 +530,7 @@ wp_insert_post($location_post);
 
    // <!-- debut loop a. et boissons smoothies-->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 10,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 6,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -575,7 +575,7 @@ wp_insert_post($location_post);
 
    // <!-- debut loop Dessert -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 11,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 7,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
