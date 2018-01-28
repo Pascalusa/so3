@@ -29,8 +29,13 @@
 
 
 </section>
+
  <footer style="background-color: #abd3a8; z-index: 999; position: fixed; bottom: 0; width: 100%;     height: 45px;"> 
-            
+
+    <!-- circle footer -->
+    <div class="circle-footer">
+      <span class="top"></span>
+    </div>
                 <div class="row" style="margin-bottom: 0px; height: 100%;">
                   <div class="col s12 m12 l4 hide-on-med-and-down" style="height: 100%;">
       
@@ -76,6 +81,40 @@
 
 <style>
 
+.circle-footer {
+  background-color: #abd3a7;
+   width: 4em;
+  height: 4em;
+  border-radius:50px;
+  position: absolute;
+      bottom: 17px;
+    transform: translate(-50%)!important;
+    left: 50%!important;
+}
+
+.top {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  margin-left: 19px;
+}
+
+.top:after {
+  content: '';
+  display: inline-block;
+  margin-top: 1.4em;
+  width: 1.4em;
+  height: 1.4em;
+  position: relative;
+    top: -4px;
+  border-top: 0.5em solid #fff;
+  border-right: 0.5em solid #fff;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
 @media screen and (max-width: 992px) {
 .globale-instagram {
   position: absolute!important;
@@ -89,8 +128,10 @@
 }
 
 .caption{
-  transform: translate(-50%, -40%)!important; top:40%!important; left: 50%!important; position: absolute!important;
+  transform: translate(-50%, -40%)!important; top:40%!important; left: 50%!important; position: absolute!important; background-color: 
 }
+
+
 </style>
 
  <!--Import jQuery before materialize.js-->
