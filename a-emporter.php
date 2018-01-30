@@ -315,10 +315,9 @@ wp_insert_post($location_post);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
 
-                        <div style="    background-color: green;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;"></div>
+                        <div class=" z-depth-3 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                    <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="    background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+    height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> </div> 
                              <!-- debut card -->
                               <div class="col s12 m12 l3">
                                  <div class="card <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?> <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">

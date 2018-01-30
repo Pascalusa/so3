@@ -7,6 +7,8 @@ Template Name: Commander en ligne
  */
 ?>
 <?php get_header(); ?>
+<body <?php body_class(); ?>  style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/background-1.png); background-repeat: no-repeat; background-position:center center; background-size: cover;"> 
+
 
        <!-- Modal Structure -->
           
