@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Job elementor
+Template Name: Commander elementor
 */
 /**
  * This is the template that displays all pages by default.
@@ -14,17 +14,16 @@ Template Name: Job elementor
  */
 ?>
 <?php get_header(); ?>
-  <div id="primary" class="content-area" style="position: relative; top: 1px;">
+  <div id="primary" class="content-area" style="position: relative; top: 0px;">
     <main id="main" class="site-main">
-
       <?php
       while ( have_posts() ) : the_post();
-        get_template_part( 'template-parts/concept', 'page-engagements' );
+        get_template_part( 'template-parts/concept', 'page-commander' );
       endwhile; // End of the loop.
       ?>
-
+<?php get_template_part( 'commander');?>
     </main><!-- #main -->
   </div><!-- #primary -->
 
 <?php
-get_template_part( 'footer-for-page' );?>
+get_template_part( 'footer2' );?>

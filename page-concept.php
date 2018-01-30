@@ -27,4 +27,4 @@ Template Name: Notre concept elementor
   </div><!-- #primary -->
 
 <?php
-get_template_part( 'footer-for-page' );?>
+get_template_part( 'footer2' );?>

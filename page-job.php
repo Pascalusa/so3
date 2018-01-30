@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: nos engagements elementor
+Template Name: Job elementor
 */
 /**
  * This is the template that displays all pages by default.
@@ -13,20 +13,18 @@ Template Name: nos engagements elementor
  * 
  */
 ?>
-
 <?php get_header(); ?>
+  <div id="primary" class="content-area" style="position: relative; top: 1px;">
+    <main id="main" class="site-main">
 
-	<div id="primary" class="content-area" style="position: relative; bottom: 5px;">
-		<main id="main" class="site-main">
+      <?php
+      while ( have_posts() ) : the_post();
+        get_template_part( 'template-parts/concept', 'page-job' );
+      endwhile; // End of the loop.
+      ?>
 
-			<?php
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/concept', 'page-engagements' );
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+  </div><!-- #primary -->
 
 <?php
 get_template_part( 'footer2' );?>

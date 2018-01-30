@@ -106,7 +106,7 @@ wp_insert_post($location_post);
                            <a onclick="toggleByClass('gluten')" class="collection-item" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; border-radius: 20px; margin-right: auto; margin-left: auto; display: block;">GLUTEN</a>
                         </div>
                         <div class="col s12 m12 l4 ">
-                             <a onclick="toggleByClass('produits-laitiers')" class="collection-item" style="border-radius: 20px; top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">Produit Laitiers</a> 
+                             <a onclick="toggleByClass('produits-laitiers')" class="collection-item" style="border-radius: 20px; top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">PRODUIT LAITIERS</a> 
                         </div>
                       </div>
 
@@ -314,6 +314,11 @@ wp_insert_post($location_post);
                          'post_type' => 'commande_en_lignes', 'cat' => 1,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
+
+                        <div style="    background-color: green;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;"></div>
                              <!-- debut card -->
                               <div class="col s12 m12 l3">
                                  <div class="card <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?> <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">

@@ -7,13 +7,10 @@ Template Name: Commander en ligne
  */
 ?>
 <?php get_header(); ?>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<body <?php body_class(); ?>  style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/background-1.png); background-repeat: no-repeat; background-position:center center; background-size: cover;"> 
 
-<section style="height: 90vh;">
        <!-- Modal Structure -->
           
-      <div class="cadre-commander" style=" background-color: white; width: 300px; height: 75px; float: right; border-radius: 8px; height: 200px;top: 64px; position: relative;">  
+      <div class="cadre-commander" style=" background-color: white; width: 300px; height: 75px; right:0; border-radius: 8px; height: 200px; bottom: 550px; position: absolute;">  
       
          <h5 style="text-align: center; font-weight: 900; font-size: 0.9em; font-family: 'Muli', sans-serif;">SALAD BY NATURE</h5>
 
@@ -28,10 +25,8 @@ Template Name: Commander en ligne
                 <a href="https://deliveroo.fr/fr/" style="position: relative; bottom: 10px; border: 2px solid red; border: 2px solid #abd3a7; padding: 7px; font-size: 12px; background-color: #abd3a7; color: #ffffff; font-family: 'Muli', sans-serif;">LIVRAISON</a>
              </h5>    
           </div>  
-      </div>  
-
-                
-
+      </div>
+        
       <!-- Debut modale 1l -->
  
 
@@ -289,7 +284,7 @@ Template Name: Commander en ligne
   
 <!-- fin Debut modale -->
 
-</section> 
+
 
   <style>
 

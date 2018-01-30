@@ -22,7 +22,7 @@ Template Name: Blog elementor
 
       <?php
       while ( have_posts() ) : the_post();
-        get_template_part( 'template-parts/concept', 'page-engagements' );
+        get_template_part( 'template-parts/concept', 'page-blog' );
       endwhile; // End of the loop.
       ?>
 
@@ -59,7 +59,7 @@ Template Name: Blog elementor
     </main><!-- #main -->
   </div><!-- #primary -->
 
-<?php get_template_part( 'footer-for-page' );?>
+<?php get_template_part( 'footer2' );?>
 
 <style>
   

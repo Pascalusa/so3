@@ -12,7 +12,7 @@ Template Name: Contact
    <!-- Partie form contact -->
       <div class="globale-contact z-depth-4" style="background-color: rgba(247, 237, 237, 0.58); height: 88vh; width: 50%; position: relative; margin-left: auto; margin-right: auto; top: 62px;">
           <div>
-             <h4 class="tittle-contact"  name="From So Lunch page Contact"  style="color: #fff; margin-top: 123px; transform: translate(-50%)!important; left: 50%!important; position: absolute!important; font-family: 'Muli', sans-serif;">Contactez - Nous</h4>
+             <h4 class="tittle-contact"  name="From So Lunch page Contact"  style="color: #fff; margin-top: 123px; transform: translate(-50%)!important; left: 50%!important; position: absolute!important; font-family: 'Muli', sans-serif;">Contactez nous</h4>
           </div>   
 
           <div class="row globale-form" style="width: 100%; ">
@@ -76,7 +76,7 @@ Template Name: Contact
 
 </section>
  <?php
-get_template_part( 'footer-for-page' );?>
+get_template_part( 'footer2' );?>
 
 
   <style>
