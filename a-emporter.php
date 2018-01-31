@@ -48,7 +48,8 @@ wp_insert_post($location_post);
 ?>
 
 
-<div class="globale-title1" style="  
+<div class="globale-title1" style=" 
+    top: 150px; position: relative;  
 ">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/solunch-food.png" style="width: 120px;
     border-bottom: 2px solid;
@@ -191,7 +192,7 @@ wp_insert_post($location_post);
     bottom: 155px;">
 
       <ul class="tabs " id="tab2" style="overflow: hidden;
-    height: 500px!important;
+    height: 500pximportant;
     transform: translate(-50%)!important;
     left: 50%!important;
     position: absolute!important;
@@ -315,38 +316,24 @@ wp_insert_post($location_post);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
 
-                        <div class=" z-depth-3 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                    <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="    background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-    height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> </div> 
-                             <!-- debut card -->
-                              <div class="col s12 m12 l3">
-                                 <div class="card <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?> <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                    <div class="card">
-                                      <div class="card-image">
-                                        <div class="img_livraison">
-                                              <img  style="height: 100%;" alt="<?php the_title();?>"  src="<?php the_post_thumbnail('medium-thumbnails');?>">
-                                               <!-- <?php echo image_box_get_meta( 'image_box_url_image' );?>   -->
-                                            </div>
-                                        <h5 class="card-title" style="font-family: 'Muli', sans-serif;"><?php the_title();?></h5>
-                                      </div>
-                                      <div class="card-content" style="font-family: 'Josefin Sans', sans-serif;">
-                                        <p><?php the_excerpt(); ?></p>
-                                      </div>
-                                      <div class="card-action" style="padding-bottom: 10px;">
-                                        <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto;">
-                                        <label style="font-family: 'Josefin Sans', sans-serif;">
-                                          0 €
-                                          <input type="checkbox" name="Base" value="<?php the_title();?>">
-                                          <span class="lever"></span>
-                                          <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                        </label>
+                        <div > 
+                         <!-- debut card -->
+                          <div class="col s12 m2 l1" style="background-color:;padding-top: 45px; padding-bottom: 25px;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                                     <div class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                     </div> 
+                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
+                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
+                                                0 €
+                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <span class="lever"></span>
+                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                                              </label>
                                      </div>
-                              </div>        
-
-
-                                      </div>
-                                    </div> 
-                              </div>   
+                                 </div>             
+                          </div>   
                              <!-- fin Card --> 
                         <?php endwhile;?>  
                       <!-- debut loop -->  
@@ -628,6 +615,10 @@ wp_insert_post($location_post);
 </form>  
 
     <style>
+                        .circle-photo   {
+  margin-left: 9px;
+}
+     
 .modal{
   background-color: #abd3a6;
 }
@@ -691,6 +682,8 @@ background-color: #80a27be0!important;}
   top: -90px!important;
   z-index: 10!important;
 }
+        
+        
 
 .dropdown {
   margin-right: auto;
@@ -757,11 +750,16 @@ input[type=email]:not(.browser-default) {
   width: 250px!important;
   padding-left: 35px!important;
 }
+ 
+.tab{
+height: 600px!important;
+}                                                       
+                                                        
 
 #tab2{
-height: 450px!important;
+height: 496px!important;
 }
-
+}
 /*#reservation {
   position: relative!important;
   top: 45px!important;
