@@ -85,7 +85,7 @@
     color: white;
     float: right;
     bottom: 17px;" class=""><?php the_title();?></span><img style="margin-top: 40px; margin-top: 40px;
-    height: 155px;" alt="<?php the_title();?>"  width="210" src="<?php the_post_thumbnail('small-thumbnails');?>"></a>
+    height: 155px;" alt="<?php the_title();?>"  width="210" <?php the_post_thumbnail('small-thumbnails');?></a>
                                       
                                   <?php endwhile;?>
                                 </div>  

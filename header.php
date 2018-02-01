@@ -42,10 +42,10 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
             <nav style="z-index:1 ; position: absolute; top: 0px; background-color: #ffffff00; box-shadow :0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0); border-bottom: 2px solid;">
               <div class="nav-wrapper">
                 <div class="row">
-                    <ul id="" class="right hide-on-med-and-down" style="font-family: 'Muli', sans-serif; z-index: 999;">
+                    <ul id="" class="right hide-on-med-and-down" style="font-family: 'Muli', sans-serif; z-index: 999; width: 100%;">
                      <li style="background-color: #ffffff; height: 100px; width: 100px;position: relative;left: 90px;
           margin-right: 150px; z-index: 9; border-radius: 50%;
-          top: 12px;"> <a href="http://ekolok4.epizy.com/wp/"><img style="width: 158%!important;
+          top: 12px;"> <a href="<?php bloginfo('url'); ?>"><img style="width: 158%!important;
     position: relative;
     right: 18px;
     bottom: 11px;" src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" class="logo"></a></li>
@@ -57,7 +57,12 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
                       <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Contact</a></li> -->   
 
 
-                     <div style="position: relative; height: 90px; display: inline-block; float: right;"> 
+                     <div style=" background-color: ;
+    position: relative;
+    height: 90px;
+    /* float: right; */
+    /* width: 100%; */
+}"> 
                            <?php 
                                 
                                 wp_nav_menu( array(
@@ -67,13 +72,14 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
                      </div> 
 
                     </ul>
-                    <ul id="" class="right hide-on-med-and-down " style="float: right!important; font-family: 'Muli', sans-serif;">
-                      <div class="commander-en-ligne">
-                      <!-- https://solunch.fr/commander-en-ligne/ -->
-                          <li><a href="http://so-lunch-usapascal366265.codeanyapp.com/commander-en-ligne/"><span style="border: 2px solid #abd3a7; padding: 8px;">Commander en ligne</span></a></li> 
-                         <!-- <li><a href="https://solunch.fr/commander-en-ligne/"><span style="border: 2px solid #abd3a7; padding: 8px;">Commander en ligne</span></a></li> -->
-                      </div>   
-                    </ul>
+                    <div class="hide-on-med-and-down" style="    height: 38px;
+    border: 2px solid #abd3a7;
+    width: 175px;
+    position: absolute;
+    right: 0;
+        z-index: -2;
+    margin-right: 20px;
+    top: 13px;"></div>
                 </div>  
               </div>
             </nav> 
@@ -120,7 +126,9 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
             </div>  
       </div>
 <style>
-
+.commander {
+    float: right;
+} 
 .hide-on-med-and-down {
     float: left!important;
     margin-left: -21px;

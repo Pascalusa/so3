@@ -176,7 +176,7 @@ wp_insert_post($location_post);
                     </div>
                     <div class="col s12 l6">  
 
-                    <a class="waves-effect modal-trigger" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 999;
+                    <a data-position="top" data-delay="50" data-tooltip='Indiquez vos restrictions alimentaires'  class="waves-effect modal-trigger tooltipped" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 999;
                       border: 2px solid white; color: #fff;">DIET</a>
 
                     <!-- restriction transform: translate(-50%); position: absolute; left: 50%;-->
@@ -530,7 +530,8 @@ wp_insert_post($location_post);
 
 </form>  
 
-    <style>
+    <style> 
+
 .switch label input[type=checkbox]:checked+.lever:after {
     background-color: #abd3a6!important;
 }  

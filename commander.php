@@ -1,18 +1,25 @@
 <?php
 /*
-Template Name: Commander en ligne
+Template Name: 
 */
 /**
  * @package So_Lunch
  */
 ?>
 <?php get_header(); ?>
-<body <?php body_class(); ?>  style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/background-1.png); background-repeat: no-repeat; background-position:center center; background-size: cover; height:100vh;"> 
+<!-- <body <?php body_class(); ?>  style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/background-1.png); background-repeat: no-repeat; background-position:center center; background-size: cover; height:100vh;"> --> 
 
 
        <!-- Modal Structure -->
           
-      <div class="cadre-commander" style=" background-color: white; width: 300px; height: 75px; right:0; border-radius: 8px; height: 200px; bottom: 550px; position: absolute;">  
+      <div class="cadre-commander" style="     background-color: white;
+    width: 300px;
+    height: 75px;
+    border-radius: 8px;
+    height: 200px;
+    float: right;
+    top: 64px;
+    position: relative;">  
       
          <h5 style="text-align: center; font-weight: 900; font-size: 0.9em; font-family: 'Muli', sans-serif;">SALAD BY NATURE</h5>
 
