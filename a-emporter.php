@@ -7,13 +7,16 @@ $name = htmlspecialchars($_POST['Nom_du_client']);
 $mail = htmlspecialchars($_POST['E-mail_du_client']);
 $date = htmlspecialchars($_POST['Date']);
 $horaire = htmlspecialchars($_POST['Tranche_horaire']);
-$bases = htmlspecialchars($_POST['Base']);
-$veggies = htmlspecialchars($_POST['Veggies']);
-$proteines = htmlspecialchars($_POST['Proteines']);
-$graine = htmlspecialchars($_POST['graines']);
-$plus = htmlspecialchars($_POST['Lesplus']);
-$boisson = htmlspecialchars($_POST['boisson&smoothie']);
-$dessert = htmlspecialchars($_POST['Desserts']);
+$menu = htmlspecialchars($_POST['menu']);
+
+
+// $bases = htmlspecialchars($_POST['Base']);
+// $veggies = htmlspecialchars($_POST['Veggies']);
+// $proteines = htmlspecialchars($_POST['Proteines']);
+// $graine = htmlspecialchars($_POST['graines']);
+// $plus = htmlspecialchars($_POST['Lesplus']);
+// $boisson = htmlspecialchars($_POST['boisson&smoothie']);
+// $dessert = htmlspecialchars($_POST['Desserts']);
 
 // Mosaik Créer un fichier de type 'contact'
 $location_post = array(
@@ -26,19 +29,7 @@ $location_post = array(
                   -----------------------
                   Tranche horaire : $horaire 
                   -----------------------
-                  Bases : $bases  
-                  -----------------------
-                  Véggies : $veggies 
-                  -----------------------
-                  Proteines : $proteines 
-                  -----------------------
-                  Graines et noix : $graine 
-                  -----------------------
-                  Les plus : $plus 
-                  -----------------------
-                  Assaisonnements-Boissons&Smoothie : $boisson 
-                  -----------------------
-                  Les desserts : $dessert" ,
+                  Menu : $menu " ,
 'post_type' => "reservation",
 'post_status' => "publish"
   );
@@ -59,43 +50,8 @@ wp_insert_post($location_post);
     left: 50%; border:2px solid; border-radius:50px; padding: 10px;"> 
 </div>    
 
-<form action="<?php echo the_permalink();?>" method="post" style="position: relative;top: 90px;">
-  <!-- <ul id="slide-out" class="side-nav " style="width: 90%; z-index: 1000;">
-    <li><div class="user-view">
-      <a href="#!user" style="transform: translate(-50%); left: 50%;  position: absolute; "><img class="circle " src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png"></a>
-      </div>
-    </li>
-    <div class="row form-input" style="transform: translate(-50%); left: 50%;  position: absolute;  z-index: 99; width: 45%; top:190px">
-              <input type="hidden" name="Réservation client"/>
-              <div class="input-field col s12 m12 l12 ">
-                <input  id="first_name" type="text" name="Nom_du_client" class="validate" style="border-bottom: 2px solid #ffffff!important;">
-                <label for="first_name" data-error="wrong" data-success="right" style="font-family: 'Josefin Sans', sans-serif;">Nom</label>
-              </div>
-            
-              <div class="input-field col s12 m12 l12 ">
-                <input id="email" type="email" name="E-mail_du_client" class="validate" style="border-bottom: 2px solid #ffffff!important;">
-                <label style="font-family: 'Josefin Sans', sans-serif;" for="email" data-error="wrong" data-success="right">E-mail</label>
-              </div>
-
-              <div class="input-field col s12 m12 l6 ">
-                <input style="border-bottom: 2px solid #ffffff!important;" id="Date" type="text" class="datepicker" name="Date" placeholder="Sélectionner une date" class="datepicker">
-                <label for="Date" data-error="wrong" data-success="right"></label>
-              </div>
-
-              <div class="input-field col s12 m12 l6 ">
-                <input type="text" name="Tranche_horaire" id="time" placeholder="Sélectionner une tranche horaire" class="timepicker" style="border-bottom: 2px solid #ffffff!important;">
-                <label for="time" data-error="wrong" data-success="right"></label>
-              </div>
-
-        <div class="col s12 l12 " style="top: 25px; ">
-           <input style="border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important;" type="submit" name="submit" class="btn" target="_blank" placeholder="Valider" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
-        </div>
-      </div>
-
-      <div class="modal-footer" style="position: absolute; top: 0px; ">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a></div>
-  </ul> -->
-
+<form action="https://formspree.io/pascal.webdesigner@gmail.com" method="POST" style="position: relative;top: 90px;">
+  
   <!-- Modal Structure -->
           <div id="modal11" class="modal">
             <div class="modal-content" style="margin-top: 45px;">
@@ -161,7 +117,12 @@ wp_insert_post($location_post);
                       <!-- buton valider -->
                             <div class="col s12 l12 " style="top: 25px; ">
                        <input style="border: 2px solid; background-color: #80a27be0!important;font-weight: 800!important; margin-left: auto; display: block;
-                         margin-right: auto;" type="submit" name="submit" class="btn" target="_blank" placeholder="Valider" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
+                         margin-right: auto;" type="submit" class="btn" target="_blank" placeholder="Valider" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
+                         <input type="hidden" name="_next" value="//site.io/thanks.html" />
+                         <input type="hidden" name="_subject" value="Nouvelle réservation client!"/>
+                         <input type="hidden" name="_cc" value="" />
+                         <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com" />
+                         <input type="text" name="_gotcha" style="display:none" />
                     </div>
                 </div>
               </div> 
@@ -325,7 +286,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -354,7 +315,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -384,7 +345,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -415,7 +376,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -447,7 +408,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -480,7 +441,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -513,7 +474,7 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="Base" value="<?php the_title();?>">
+                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>

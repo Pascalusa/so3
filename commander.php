@@ -206,26 +206,7 @@ Template Name:
 
   
                 <!-- tab1 -->
-                <form action="charge.php" method="post">
-              
-                <div style="position: absolute; width: 100%; height: 45px;"></div>
-                  <!-- <div class="restriction1" style="z-index: 9;left: 150px; position: absolute;   transform: translate(-50%); left: 50%;  display: inline-block; z-index: 999  " >
-                    <a style="background-color: rgba(171, 211, 166, 0); left: 150px; position: absolute;  z-index: 999; transform: translate(-50%); border: 2px solid; left: 50%; top: 280px;  " class='dropdown-button restriction btn' href='#' data-activates='dropdown1'><span style=" margin-right: 45px;">Diet<span><i style="font-size: 1.9rem!important; position: absolute; bottom: -3px; right: 7px;" class="large material-icons">arrow_drop_down</i><!-- <i class="large material-icons" style="    font-size: 2.4rem!important;">visibility_off</i> --></a>
-                  </div>  -->  
-                        <script
-                          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                          data-key="pk_test_kcyJHgsF4eafMhrHVDtIQ7Sl"
-                          data-amount=""
-                          data-panel-label="Valider"
-                          data-receipt_email="true"
-                          data-description="false"
-                          data-name="Demo Site"
-                          data-shipping_name="true"
-                          data-billing-address="false"
-                          data-image="http://ekolok4.epizy.com/wp/wp-content/themes/So/img/SO-LUNCH-EMBLEME-01.png"
-                          data-locale="auto"
-                          data-currency="eur">
-                        </script>  
+               
 
                     <div id="test1" class="col s12">    
                           <div class="row">
