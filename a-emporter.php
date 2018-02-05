@@ -9,15 +9,6 @@ $date = htmlspecialchars($_POST['Date']);
 $horaire = htmlspecialchars($_POST['Tranche_horaire']);
 $menu = htmlspecialchars($_POST['menu']);
 
-
-// $bases = htmlspecialchars($_POST['Base']);
-// $veggies = htmlspecialchars($_POST['Veggies']);
-// $proteines = htmlspecialchars($_POST['Proteines']);
-// $graine = htmlspecialchars($_POST['graines']);
-// $plus = htmlspecialchars($_POST['Lesplus']);
-// $boisson = htmlspecialchars($_POST['boisson&smoothie']);
-// $dessert = htmlspecialchars($_POST['Desserts']);
-
 // Mosaik Créer un fichier de type 'contact'
 $location_post = array(
 'post_title' =>  "$name || $mail",
@@ -175,29 +166,29 @@ wp_insert_post($location_post);
                   </div>
 
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(2);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Veggies</h6> -->
+                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Veggies</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
                   <div class="tab col  s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped" >
+                    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" >
                     <!-- proteine -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px;top: 15px;position: relative;right: 10px;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7;  height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les graines et les Noix</h6> -->
+                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les graines et les Noix</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped" ><!-- <h6 style="text-align: center;">Les plus</h6> -->
+                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><!-- <h6 style="text-align: center;">Les plus</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Assaisonnements  <span style="position: relative; top: 25px;
+                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Assaisonnements  <span style="position: relative; top: 25px;
                     right: 145px;">Boissons & Smooties</span></h6>  -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
                   <div class="col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Desserts</h6> -->
+                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Desserts</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
               </div>     
@@ -260,11 +251,111 @@ wp_insert_post($location_post);
           <li onclick="toggleByClass('poisson')" class="collection-item">Poisson</li>
           <li onclick="toggleByClass('viande')" class="collection-item">Viande</li>
       </ul> -->
-
       
-
-
  
+     <!--    Snipped de prix      -->
+      
+         <!-- base -->
+          <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 1,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?>  - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?> 
+      
+         <!-- veggies -->
+          <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 3,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="veggies-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?> 
+      
+      <!-- proteine -->
+         <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 4,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="proteine-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?>  - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?> 
+      
+      <!-- grainesetnoix -->
+         <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 5,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?>  - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?>
+      
+      <!-- plus -->
+         <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 6,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="plus-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?>
+      
+       <!-- boissons-smoothies -->
+        <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 7,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?>
+      
+      <!-- dessert -->
+      <?php
+                 $args = array('post_per_page' => -1,
+                   'post_type' => 'commande_en_lignes', 'cat' => 8,);
+                  $category = new WP_Query($args);
+                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
+
+                        <div  id="dessert-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                          <?php the_post_thumbnail('medium-thumbnails'); ?>
+                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                        </div> 
+
+           <?php endwhile;?>
+      
+      
+      
+       
 
 
     </div>
@@ -286,12 +377,20 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
-                                 </div>             
+                                 </div>    
+                                  <div id="<?php the_title();?>" style="display: none;"><?php the_title();?></div>
+                                     <script>
+                                            $(".<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
+
                           </div>   
                           <!-- fin Card --> 
                         <?php endwhile;?>  
@@ -301,36 +400,6 @@ wp_insert_post($location_post);
       <div id="g1" class="col s12">
          <?php
    // <!-- debut loop veggies -->
-                       $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 2,);
-                        $category = new WP_Query($args);
-                        while (  $category -> have_posts() ) : $category -> the_post(); ?>
-                            <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
-                                     </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                 </div>             
-                          </div>   
-                          <!-- fin Card -->
-                        <?php endwhile;?>  
-                      <!-- debut loop -->  
-      </div>
-
-      <div id="g2" class="col s12">
-        <div class="row">
-         <!-- debut loop proteine -->
-           <?php
                        $args = array('post_per_page' => -1,
                          'post_type' => 'commande_en_lignes', 'cat' => 3,);
                         $category = new WP_Query($args);
@@ -345,12 +414,57 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="veggies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
-                                 </div>             
+                                 </div>     
+                                  
+                                
+                                     <script>
+                                            $(".veggies-<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#veggies-<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
+                          </div>   
+                          <!-- fin Card -->
+                        <?php endwhile;?>  
+                      <!-- debut loop -->  
+      </div>
+
+      <div id="g2" class="col s12">
+        <div class="row">
+         <!-- debut loop proteine -->
+           <?php
+                       $args = array('post_per_page' => -1,
+                         'post_type' => 'commande_en_lignes', 'cat' => 4,);
+                        $category = new WP_Query($args);
+                        while (  $category -> have_posts() ) : $category -> the_post(); ?>
+                            <!-- debut card -->
+                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                     </div> 
+                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
+                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
+                                                0 €
+                                                <input class="proteine-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <span class="lever"></span>
+                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                                              </label>
+                                     </div>
+                                 </div>       
+                                  
+                                  <script>
+                                            $(".proteine-<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#proteine-<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
                           </div>   
                           <!-- fin Card --> 
                         <?php endwhile;?>  
@@ -360,10 +474,10 @@ wp_insert_post($location_post);
 
       <div id="g3" class="col s12">
         <div class="row">
-          <!-- debut loop graineset noix-->
+          <!-- debut loop grainesetnoix-->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 4,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 5,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -376,11 +490,18 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="grainesetnoix-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
+                                       
+                                       <script>
+                                            $(".grainesetnoix-<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#grainesetnoix-<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
                                  </div>             
                           </div>   
                           <!-- fin Card --> 
@@ -395,7 +516,7 @@ wp_insert_post($location_post);
            <!-- debut loop les plus -->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 5,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 6,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
@@ -408,12 +529,19 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="plus-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
-                                 </div>             
+                                 </div> 
+                                  
+                                    <script>
+                                            $(".plus-<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#plus-<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
                           </div>   
                           <!-- fin Card --> 
                         <?php endwhile;?>  
@@ -426,9 +554,9 @@ wp_insert_post($location_post);
         <div class="row">
           <?php
 
-   // <!-- debut loop a. et boissons smoothies-->
+   // <!-- debut loop a. et boissons-smoothies-->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 6,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 7,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
@@ -441,12 +569,19 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="boissons-smoothies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
-                                 </div>             
+                                 </div>      
+                                  
+                                    <script>
+                                            $(".boissons-smoothies-<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#boissons-smoothies-<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
                           </div>   
                           <!-- fin Card --> 
                         <?php endwhile;?>  
@@ -461,7 +596,7 @@ wp_insert_post($location_post);
 
    // <!-- debut loop Dessert -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 7,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 8,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
@@ -474,11 +609,18 @@ wp_insert_post($location_post);
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="dessert-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
+                                       
+                                       <script>
+                                            $(".dessert-<?php the_title();?>").click(function() {
+                                            $(this).toggleClass("on");
+                                            $("#dessert-<?php the_title();?>").slideToggle();
+                                          });
+                                    </script>
                                  </div>             
                           </div>   
                           <!-- fin Card --> 
@@ -708,7 +850,8 @@ get_template_part( 'footer-for-page' );?>
     $('#modal10').modal();
   });
 </script>
-
+        
+     
 <script>         
 function toggleByClass(className) {
      $("."+className).toggle();

@@ -12,12 +12,12 @@ Template Name: Contact
    <!-- Partie form contact -->
       <div class="globale-contact z-depth-4" style="background-color: rgba(247, 237, 237, 0.58); height: 88vh; width: 50%; position: relative; margin-left: auto; margin-right: auto; top: 62px;">
           <div>
-             <h4 class="tittle-contact"  name="From So Lunch page Contact"  style="color: #fff; margin-top: 123px; transform: translate(-50%)!important; left: 50%!important; position: absolute!important; font-family: 'Muli', sans-serif;">Contactez nous</h4>
+             <h4 class="tittle-contact"  name="From So Lunch page Contact"  style="color: #fff; margin-top: 56px; transform: translate(-50%)!important; left: 50%!important; position: absolute!important; font-family: 'Muli', sans-serif;">Contactez nous</h4>
           </div>   
 
           <div class="row globale-form" style="width: 100%; ">
             <form class="col s12" action="https://formspree.io/usa.pascal@yahoo.fr" method="POST">
-              <div class="row" style="position: relative; top: 123px">
+              <div class="row" style="position: relative; top: 62px;">
               <input type="hidden" name="From So Lunch page Contact"/>
                 <div class="input-field col s12 l12 ">
                   <i class="material-icons prefix" style="color: white;">send</i>
@@ -53,7 +53,7 @@ Template Name: Contact
             </form>
          </div> 
         
-            <div class="row " style=" position: relative; top: 77px; margin-bottom: 45px;">
+            <div class="row " style=" position: relative; top:-4px; margin-bottom: 45px;">
                 <div class="col s12 l6">
                     <div class=" other-contact" style=" font-size: 15px;width: 240px; margin-left: auto; margin-right: auto; margin-bottom: 19px; color: #fff; font-family: 'Josefin Sans', sans-serif;">
                       Téléphone : <?php echo info_page_contacte_get_meta( 'info_page_contacte_numero_de_l_entreprise' );?> <span style=" color: #fff; position: relative;float: left;margin-right: 15px;border: 2px solid; border-radius: 50%;height: 30px;width: 30px;"><i class="material-icons prefix" style="position: relative;top: 1px;left: 1px;">phone</i></span>
