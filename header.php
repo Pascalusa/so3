@@ -103,19 +103,19 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
           <img src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" style="width: 77%; margin-right: auto; margin-left: auto; display: block;" >
          </div>  
 
-          <li class="text-menu"><a href="http://localhost/wordpress-so/">Accueil</a></li>
+         <li class="text-menu"><a href="<?php bloginfo('url'); ?>/">Accueil</a></li>
           <div class="divider"></div>
-          <li class="text-menu"><a href="http://localhost/wordpress-so/index.php/notre-concept/">Notre concept</a></li>
+          <li class="text-menu"><a href="<?php bloginfo('url'); ?>/notre-concept/">Notre concept</a></li>
           <div class="divider"></div>
-          <li class="text-menu"><a href="http://localhost/wordpress-so/index.php/nos-engagements/">Nos engagements</a></li>
+          <li class="text-menu"><a href="<?php bloginfo('url'); ?>/nos-engagements/">Nos engagements</a></li>
           <div class="divider"></div>
-          <li class="text-menu"><a href="http://localhost/wordpress-so/index.php/blog/">Blog/</a></li>
+          <li class="text-menu"><a href="<?php bloginfo('url'); ?>/blog/">Blog/</a></li>
           <div class="divider"></div>
-          <li class="text-menu"><a href="http://localhost/wordpress-so/index.php/contact/">Contact</a></li>
+          <li class="text-menu"><a href="<?php bloginfo('url'); ?>/contact/">Contact</a></li>
           <div class="divider"></div>
-          <li class="text-menu"><a href="http://localhost/wordpress-so/index.php/jobs/">Jobs</a></li>
+          <li class="text-menu"><a href="<?php bloginfo('url'); ?>/jobs/">Jobs</a></li>
           <div class="divider"></div>
-          <li class="text-menu" ><a href="http://localhost/wordpress-so/index.php/commander-en-ligne/">Commander en ligne</a></li>
+          <li class="text-menu" ><a href="<?php bloginfo('url'); ?>/commander-en-ligne/">Commander en ligne</a></li>
           <div class="divider"></div>
         </ul>
         
