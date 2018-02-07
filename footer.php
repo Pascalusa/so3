@@ -12,18 +12,7 @@
 ?>       
 
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4 style="font-family: 'Muli', sans-serif; text-align: center;"><?php the_title();?></h4>
-      <p style="color: red;">     </p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
-    </div>
-  </div>
-
-
+ 
 
 
 
@@ -41,7 +30,7 @@
       
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
-                     <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a class="modal-trigger"  href="#modal1" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a></h6>
+                     <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a href="<?php bloginfo('url'); ?>/mentions-legales" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a></h6>
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
                     <div style=" margin-right: auto; margin-left: auto; width: 285px;margin-right: auto; margin-left: auto;  width: 285px;position: relative;top: 6px;">
@@ -75,17 +64,30 @@
                                    'post_type' => 'instagram',);
                                   $query = new WP_Query($args); 
                                   while (  $query -> have_posts() ) : $query -> the_post(); ?>
+                                  
+                                  <figure class="snip1571">
+                                    <?php the_post_thumbnail('small-thumbnails');?>
+                                    <figcaption>
+                                      <h3><?php the_title();?></h3>
+                                    </figcaption>
+                                    <a href="https://www.instagram.com/solunchdijon/"></a>
+                                  </figure>
+                                  
                                       <!-- <figure class="snip1313">
                                       <img class="materialboxed"  src="<?php the_post_thumbnail('small-thumbnails');?>" style="width: 100%;"> 
                                        <div class="image"><img style="height: 100%; src="<?php the_post_thumbnail('small-thumbnails');?>"></div><span class="read-more" >
                                        <?php the_title();?> <i class="ion-android-arrow-forward"></i></span><a href="https://www.instagram.com/solunchdijon/" target="_blank"></a>
                                       </figure> -->
 
-                                      <a  href="https://www.instagram.com/solunchdijon/"><span style="     position: absolute;
+<!--                                       <a  href="https://www.instagram.com/solunchdijon/"><span style="     position: absolute;
     color: white;
     float: right;
     bottom: 17px;" class=""><?php the_title();?></span><img style="margin-top: 40px; margin-top: 40px;
-    height: 155px;" alt="<?php the_title();?>"  width="210" <?php the_post_thumbnail('small-thumbnails');?></a>
+    height: 155px;" alt="<?php the_title();?>"  width="210" <?php the_post_thumbnail('small-thumbnails');?></a> -->
+                                  
+                                  
+                                  
+                                  
                                       
                                   <?php endwhile;?>
                                 </div>  
@@ -110,8 +112,6 @@
 
 <style>
 
-im
-
 @media screen and (max-width: 992px) {
 .globale-instagram {
   position: absolute!important;
@@ -120,13 +120,78 @@ im
 
 }
 
-.slides{
-  height: 100vh!important;
+.snip1571 {
+  background-color: #000;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 10px 7px;
+    max-width: 197px;
+    min-width: 210px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: 27px;
+    height: 153px;
 }
+.snip1571 *,
+.snip1571 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1571 img {
+  backface-visibility: hidden;
+      width: 210px;
+    height: 210px;
+  vertical-align: top;
+}
+.snip1571 figcaption {
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.snip1571 figcaption:before {
+  background-color: #ffffff;
+  bottom: -5px;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 100%;
+  top: -5px;
+  z-index: -1;
+}
+.snip1571 h3 {
+  background-color: #c73232;
+  color: #ffffff;
+  font-size: 0.6em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.snip1571 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.snip1571:hover > img,
+.snip1571.hover > img {
+  opacity: 0.1;
+}
+.snip1571:hover figcaption:before,
+.snip1571.hover figcaption:before {
+  right: -5px;
+}
+ 
 
-.caption{
-  transform: translate(-50%, -40%)!important; top:40%!important; left: 50%!important; position: absolute!important;
-}
 </style>
 
  <!--Import jQuery before materialize.js-->

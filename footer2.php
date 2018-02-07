@@ -12,18 +12,6 @@
 ?>       
 
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4 style="font-family: 'Muli', sans-serif; text-align: center;"><?php the_title();?></h4>
-      <p style="color: red;">     </p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
-    </div>
-  </div>
-
-
 
 
 
@@ -41,7 +29,7 @@
       
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
-                     <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a class="modal-trigger"  href="#modal1" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a></h6>
+                     <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a href="<?php bloginfo('url'); ?>/mentions-legales" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a></h6>
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
                     <div style=" margin-right: auto; margin-left: auto; width: 285px;margin-right: auto; margin-left: auto;  width: 285px;position: relative;top: 6px;">

@@ -254,7 +254,7 @@ wp_insert_post($location_post);
       
  
      <!--    Snipped de prix      -->
-      
+     <div class="globale-snipped-price" style=" top: 420px;position: relative;"> 
          <!-- base -->
           <?php
                  $args = array('post_per_page' => -1,
@@ -262,9 +262,9 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?>  - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?> 
@@ -276,9 +276,9 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="veggies-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="veggies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?> 
@@ -290,9 +290,9 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="proteine-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="proteine-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?>  - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?> 
@@ -304,9 +304,9 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?>  - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -318,9 +318,9 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="plus-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="plus-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -332,9 +332,9 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -346,14 +346,14 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="dessert-<?php the_title();?>" style="display: none; background-color: #abd3a6;" class="chip">
+                        <div  id="dessert-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span>  
                         </div> 
 
            <?php endwhile;?>
       
-      
+      </div>
       
        
 
@@ -698,6 +698,11 @@ background-color: #80a27be0!important;}
     position: relative!important;
     margin-top: 45px!important;
 }
+        
+  .globale-snipped-price {
+    top: 800px!important;
+}
+            
 
 .global-tab-mobile {
       position: relative;
@@ -776,6 +781,11 @@ input[type=email]:not(.browser-default) {
   .global-tab2{
   width: 250px!important;
   padding-left: 35px!important;
+}
+  
+.first-tab2 {
+    position: relative!important;
+    top: 757px!important;
 }
  
 .tab{
