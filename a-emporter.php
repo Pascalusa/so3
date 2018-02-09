@@ -30,9 +30,7 @@ wp_insert_post($location_post);
 ?>
 
 
-<div class="globale-title1" style=" 
-    top: 150px; position: relative;  
-">
+<div class="globale-title1" style=" top: 150px; position: relative;  ">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/solunch-food.png" style="width: 120px;
     border-bottom: 2px solid;
     position: absolute;
@@ -46,7 +44,7 @@ wp_insert_post($location_post);
   <!-- Modal Structure -->
           <div id="modal11" class="modal">
             <div class="modal-content" style="margin-top: 45px;">
-                      <div class="row" style="    width: 70%;" >
+                      <div class="row" >
                         <div class="col s12  m12 l4 ">                  
                            <a onclick="toggleByClass('soja')" class="collection-item" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important;     border-radius: 20px; margin-right: auto; margin-left: auto; display: block;">SOJA</a>
                         </div>
@@ -69,46 +67,75 @@ wp_insert_post($location_post);
                           </div>
                       </div>
             </div>
+                      <!--Button Close-->
                        <a class="modal-action modal-close" style="position: relative; float: right; bottom: 204px;
-                    padding-right: 20px;"><span style="font-size: 1.5em;">X</span></a>
+                    padding-right: 20px;"><span style="font-size: 1.5em; color:#fff;">X</span></a>
           </div>
 
-
               <!-- Modal Structure -->
-              <div id="modal10" class="modal bottom-sheet" style="background-color: #777d76e0!important;">
-                <div class="modal-content">
+              <div id="modal10" class="modal modal-trigger" style="background-color: #4ab794e0!important; border-radius: 45px!important;">
+                
+                <!-- fermeture modale -->
+                <a class="modal-action modal-close" style="position: absolute; right: 0px;top: 3%; margin-right: 32px; z-index: 99;"><span style="font-size: 1.5em; color:#fff;">X</span></a>
+                
 
-                      <div class="row" style="position: relative;top: 35px;">
-                        <div class="col s12 l4">
+                  <img src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" style="height: 107px; width: 107px; position: absolute; z-index: 99;transform: translate(-50%); left: 50%;
+                      background-color: white; border-radius: 35px; top: 52px; border: 2px solid #1f866996;">
+
+                <div class="modal-content" style="position: relative; bottom: 20px; height: 127px; background-color: #1f866996;">
+
+                      <div class="row" style=" position: relative; top: 140px;">
+                        <div class=" input-field col s12">
                           
-                          <input  id="first_name" placeholder="Nom" type="text" name="Nom_du_client" class="validate" style="border-bottom: 2px solid #000!important;">
+                          <input  id="first_name" type="text" name="Nom_du_client" class="validate" style="border-bottom: 2px solid #000!important;">
+                          <label for="first_name">Nom</label>
                          
                         </div>
-                        <div class="col s12 l4">
+                        <div class=" input-field col s12">
                           
-                          <input id="email" type="email" name="E-mail_du_client" class="validate" style="border-bottom: 2px solid #000!important;" placeholder="Email">
+                          <input id="email" type="email" name="E-mail_du_client" class="validate" style="border-bottom: 2px solid #000!important;">
+                          <label for="email">E-mail</label>
 
                         </div>
-                        <div class="col s12 l2 ">
-
-                             <input style="border-bottom: 2px solid #000!important;" id="Date" type="text" class="validate" name="Date" placeholder="Date de récupération de votre menu">
-
-                             <!-- <input style="border-bottom: 2px solid #000!important;" id="Date" type="text" class="datepicker" name="Date" placeholder="Sélectionner une date" class="datepicker"> -->
-
-
+                        <div class="col s12">     
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                            <label>Jour</label>
+                          </div>
+                       </div>
+                        
+                        <div class="col s12">   
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                            <label>Date</label>
+                          </div>
+                        </div>  
+                            
+                        <div class="col s12">
+                            <div class="input-field col s12">
+                              <select>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                              </select>
+                              <label>L'heure</label>
+                            </div>
                         </div>
-                        <div class="col s12 l2 ">
-                          
-                          <input type="text" name="Tranche_horaire" id="time" placeholder="Heure de récupération de votre menu" class="validate" style="border-bottom: 2px solid #000!important;">
-                         <!--  <input type="text" name="Tranche_horaire" id="time" placeholder="Sélectionner une tranche horaire" class="timepicker" style="border-bottom: 2px solid #000!important;"> -->
-                        </div>
-                        <!-- fermeture modale -->
-                        <a class="modal-action modal-close" style="position: relative;float: right; bottom: 125px;"><span style="font-size: 1.5em;">X</span></a>
+                        
                       </div>
                       <!-- buton valider -->
-                            <div class="col s12 l12 " style="top: 25px; ">
-                       <input style="border: 2px solid; background-color: #80a27be0!important;font-weight: 800!important; margin-left: auto; display: block;
-                         margin-right: auto;" type="submit" class="btn" target="_blank" placeholder="Valider" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
+                       <div class="col s12 l12 " style="top: 130px;
+    position: relative;">
+                         <input style="border: 2px solid; font-weight: 800!important; margin-left: auto; display: block; background-color: #7bb6a4;
+                         margin-right: auto;" type="submit" class="btn" value="Valider" target="_blank" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
                          <input type="hidden" name="_next" value="//site.io/thanks.html" />
                          <input type="hidden" name="_subject" value="Nouvelle réservation client!"/>
                          <input type="hidden" name="_cc" value="" />
@@ -647,11 +674,19 @@ wp_insert_post($location_post);
 }
      
 .modal{
-  background-color: #abd3a6;
+  background-color: ;
+  border-radius: 45px;
+  width: 708px;
+  height:100%;
 }
 
-.modal.bottom-sheet{
-background-color: #80a27be0!important;}
+      
+ @media screen and (max-width: 600px) {
+  .modal{
+    width: 100%!important;
+}
+}       
+
 .button-collapse{
       margin-left: auto;
     margin-right: auto;
@@ -672,11 +707,6 @@ background-color: #80a27be0!important;}
   top: 135px;
 }
 
-/*.side-nav{
- background-image: url(<?php bloginfo('stylesheet_directory'); ?>/img/background-1.png);
- 
-}*/
-
 
 .picker--opened .picker__holder{
       background: rgba(0, 0, 0, 0);
@@ -692,6 +722,7 @@ background-color: #80a27be0!important;}
     bottom: -90px;
 }    
 
+      
 
       @media screen and (max-width: 992px) {
   .global-tab{
@@ -762,9 +793,6 @@ input[type=email]:not(.browser-default) {
     background-color: rgba(255, 255, 255, 0);
 }
 
-/*.side-nav {
-  background: url(<?php bloginfo('stylesheet_directory'); ?>/img/pexels-photo-616404.jpg)!important; background-repeat: no-repeat; background-position:center center; background-size: cover;
-}*/
 
 .side-nav {
   background-color:#73a1a9;
@@ -851,6 +879,10 @@ get_template_part( 'footer-for-page' );?>
                 aftershow: function(){} //Function for after opening timepicker
               });
         });
+  
+         $(document).ready(function() {
+           $('select').material_select();
+         });
 
 </script>
 

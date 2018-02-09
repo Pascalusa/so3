@@ -21,14 +21,14 @@ Template Name:
     top: 64px;
     position: relative;">  
       
-         <h5 style="text-align: center; font-weight: 900; font-size: 0.9em; font-family: 'Muli', sans-serif; margin-bottom: 17px;">Commandez votre lunch bowl !</h5>
+         <h5 style="text-align: center; font-weight: 900; font-size: 0.9em; font-family: 'Muli', sans-serif; margin-bottom: 17px;">Commandez votre Lunch Bowl !</h5>
          <li class="divider" style="height: 2px;
     overflow: hidden;
     width: 45px;
     margin-left: auto;
     margin-right: auto;
     background-color: #000000;"></li>
-         <p style="font-size: 0.91em; width: 225px; margin-right: auto; margin-left: auto; font-family: 'Josefin Sans', sans-serif; margin-bottom: -7px;">Composez votre propre bowl en associant les ingrédients de votre choix. 1 base, 3 ingrédients dont 1 viande ou poisson ou fromage, et 1 sauce pour commencer, puis ajoutez y tout ce que vous souhaitez!
+         <p style="font-size: 0.91em; width: 225px; margin-right: auto; margin-left: auto; font-family: 'Josefin Sans', sans-serif; margin-bottom: -7px;">Composez votre propre bowl en associant les ingrédients de votre choix. 1 base, 3 ingrédients dont 1 protéine ou fromage, et 1 sauce pour commencer, puis ajoutez-y tout ce que vous souhaitez!
          <br><br><div class="center-align">À partir de 9.90€</div></p>
 
          <div class="row" style="margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;  width: 80%;">

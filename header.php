@@ -39,7 +39,7 @@ https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg
 https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
 4NamcIqbjBZf -->
 
-            <nav style="z-index:1 ; position: absolute; top: 0px; background-color: #ffffff00; box-shadow :0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0); border-bottom: 2px solid;">
+            <nav style="z-index:1 ; position: absolute; top: 0px; background-color: #ffffff00!important; box-shadow :0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0); border-bottom: 2px solid;">
               <div class="nav-wrapper">
                 <div class="row">
                     <ul id="" class="right hide-on-med-and-down" style="font-family: 'Muli', sans-serif; z-index: 999; width: 100%;">
@@ -126,6 +126,12 @@ https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
             </div>  
       </div>
 <style>
+  
+  nav {
+    -ms-background-color:#ffffff00!important;
+} 
+  
+  
 .commander {
     float: right;
 } 
