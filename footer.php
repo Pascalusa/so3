@@ -59,19 +59,21 @@
                   
                     <!-- Card loop -->       
                               <div style="height: 12px; width: 100%;">
-                                <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+                               
                                   <?php $args = array('post_per_page' => -1,
                                    'post_type' => 'instagram',);
                                   $query = new WP_Query($args); 
                                   while (  $query -> have_posts() ) : $query -> the_post(); ?>
                                   
-                                  <figure class="snip1571">
+                                <div id='instafeed'></div>
+                                  
+<!--                                   <figure class="snip1571">
                                     <?php the_post_thumbnail('small-thumbnails');?>
                                     <figcaption>
                                       <h3><?php the_title();?></h3>
                                     </figcaption>
                                     <a href="https://www.instagram.com/solunchdijon/"></a>
-                                  </figure>
+                                  </figure> -->
                                   
                                       <!-- <figure class="snip1313">
                                       <img class="materialboxed"  src="<?php the_post_thumbnail('small-thumbnails');?>" style="width: 100%;"> 
@@ -90,7 +92,7 @@
                                   
                                       
                                   <?php endwhile;?>
-                                </div>  
+                                
                               </div>  
                   </div>    
 </footer> 
@@ -117,93 +119,53 @@
   position: absolute!important;
   bottom: 45px!important;
 }
-
 }
-
-.snip1571 {
-  background-color: #000;
-    display: inline-block;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    margin: 10px 7px;
-    max-width: 197px;
-    min-width: 210px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    top: 27px;
-    height: 153px;
-}
-.snip1571 *,
-.snip1571 *:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-.snip1571 img {
-  backface-visibility: hidden;
-      width: 210px;
-    height: 210px;
-  vertical-align: top;
-}
-.snip1571 figcaption {
-  bottom: 30px;
-  left: 0;
-  position: absolute;
-  z-index: 0;
-}
-.snip1571 figcaption:before {
-  background-color: #ffffff;
-  bottom: -5px;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 100%;
-  top: -5px;
-  z-index: -1;
-}
-.snip1571 h3 {
-  background-color: #c73232;
-  color: #ffffff;
-  font-size: 0.6em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 0;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  z-index: 1;
-}
-.snip1571 a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-.snip1571:hover > img,
-.snip1571.hover > img {
-  opacity: 0.1;
-}
-.snip1571:hover figcaption:before,
-.snip1571.hover figcaption:before {
-  right: -5px;
-}
+  
  
+  #instafeed {
+    margin: 0 0.5em;
+}
+#instafeed a {
+       margin: 0;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: all .3s;
+    height: 162px;
+    background-size: cover;
+    width: 162px;
+    top: 33px;
+}
 
+#instafeed a:hover{
+  opacity: .6;
+}
 </style>
 
  <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+      <script type="text/javascript">
+        var feed = new Instafeed({
+            userId:5938852719, 
+            accessToken: '5938852719.1677ed0.ef5e406a6dcf4ca999da116681aa2c3f', 
+            get: 'user',
+            resolution: 'low_resolution',
+            limit: 10,
+            template: '<a href="{{link}}" target="_blank" style="background: white url({{image}}); background-size: cover;"></a>'
+          });
+          feed.run();
+     </script>
 
-       <script type="text/javaScript" >         
+<!--        <script type="text/javaScript" >         
            $(document).ready(function(){
               $('.slider').slider();
            });     
-       </script>
+       </script> -->
+
+
 
 
        <script type="text/javaScript" > 

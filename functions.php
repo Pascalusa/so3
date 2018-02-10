@@ -571,11 +571,10 @@ add_filter('login_errors', create_function('$a', "return null;"));
 // https://www.youtube.com/watch?v=Pd44EPfsRlw
 
 // ---------------------------------
+// --> https://smashballoon.com/instagram-feed/find-instagram-user-id/ + http://instagram.pixelunion.net/
+// --> https://codepen.io/michellymelo/pen/wzzBKP?page=7
 // https://elementortemplatepack.com/
 // https://www.whatsmydns.net/ = dns
 //  https://www.whynopadlock.com/results/03ec91ac-76f2-40ab-ad8d-def009d26b4a = ssl verif 
 // https://www.youtube.com/watch?v=W4bWAKeNCdM
 // http://nimishprabhu.com/header-php-refresh-redirect-location-url-x-seconds.html
-// header("Refresh: 5; url=index.php");
-//  +
-// echo 'Logged in successfully.'; 

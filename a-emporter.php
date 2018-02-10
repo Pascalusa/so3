@@ -30,13 +30,13 @@ wp_insert_post($location_post);
 ?>
 
 
-<div class="globale-title1" style=" top: 150px; position: relative;  ">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/solunch-food.png" style="width: 120px;
+<div class="globale-title1" style=" top: 120px; position: relative;  ">
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hot-soup-bowl2.png" style="width: 85px;
     border-bottom: 2px solid;
     position: absolute;
-    bottom: -32px;
+    top: -5px;
     transform: translate(-50%);
-    left: 50%; border:2px solid; border-radius:50px; padding: 10px;"> 
+    left: 50%;"> 
 </div>    
 
 <form action="https://formspree.io/pascal.webdesigner@gmail.com" method="POST" style="position: relative;top: 90px;">
@@ -97,7 +97,7 @@ wp_insert_post($location_post);
                           <label for="email">E-mail</label>
 
                         </div>
-                        <div class="col s12">     
+                        <div class="col s12 m12 l6">     
                           <div class="input-field col s12">
                             <select>
                               <option value="1">Option 1</option>
@@ -108,7 +108,7 @@ wp_insert_post($location_post);
                           </div>
                        </div>
                         
-                        <div class="col s12">   
+                        <div class="col s12 m12 l6">   
                           <div class="input-field col s12">
                             <select>
                               <option value="1">Option 1</option>
@@ -119,7 +119,7 @@ wp_insert_post($location_post);
                           </div>
                         </div>  
                             
-                        <div class="col s12">
+                        <div class="col s12 m12 l6">
                             <div class="input-field col s12">
                               <select>
                                 <option value="1">Option 1</option>
@@ -677,8 +677,9 @@ wp_insert_post($location_post);
   background-color: ;
   border-radius: 45px;
   width: 708px;
-  height:100%;
+  height: 100%;
 }
+ 
 
       
  @media screen and (max-width: 600px) {
