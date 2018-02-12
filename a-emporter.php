@@ -32,7 +32,7 @@ wp_insert_post($location_post);
 
 <div class="globale-title1" style=" top: 120px; position: relative;  ">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hot-soup-bowl2.png" style="width: 85px;
-    border-bottom: 2px solid;
+       
     position: absolute;
     top: -5px;
     transform: translate(-50%);
@@ -80,7 +80,7 @@ wp_insert_post($location_post);
                 
 
                   <img src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" style="height: 107px; width: 107px; position: absolute; z-index: 99;transform: translate(-50%); left: 50%;
-                      background-color: white; border-radius: 35px; top: 52px; border: 2px solid #1f866996;">
+                      background-color: white; border-radius: 35px; top: 52px; border-bottom: 5px solid;">
 
                 <div class="modal-content" style="position: relative; bottom: 20px; height: 127px; background-color: #1f866996;">
 
@@ -186,7 +186,7 @@ wp_insert_post($location_post);
     width: 787px;
     padding-left: 45px;
     top: 96px;">
-
+   
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
                     <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><!-- <h6 style="text-align: center;">base</h6> -->
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
@@ -291,7 +291,7 @@ wp_insert_post($location_post);
 
                         <div  id="<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?> 
@@ -305,7 +305,7 @@ wp_insert_post($location_post);
 
                         <div  id="veggies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?> 
@@ -319,7 +319,7 @@ wp_insert_post($location_post);
 
                         <div  id="proteine-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?> 
@@ -333,7 +333,7 @@ wp_insert_post($location_post);
 
                         <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -347,7 +347,7 @@ wp_insert_post($location_post);
 
                         <div  id="plus-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -361,7 +361,7 @@ wp_insert_post($location_post);
 
                         <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -375,7 +375,7 @@ wp_insert_post($location_post);
 
                         <div  id="dessert-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> - <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span>  
+                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span>  
                         </div> 
 
            <?php endwhile;?>

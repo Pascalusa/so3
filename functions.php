@@ -7,6 +7,13 @@
  * @package So_Lunch
  */
 
+// custom logo wpredpress
+function childtheme_custom_login() {
+ echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login.css" />';
+}
+
+add_action('login_head', 'childtheme_custom_login');
+
 /*************************************Ajout css************************************ */
 function so_lunch_styles(){
  wp_enqueue_style('style css', get_stylesheet_directory_uri().'/style.css');

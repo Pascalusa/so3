@@ -67,6 +67,10 @@ Template Name: Blog elementor
     height:100%!important;
     width: 100%!important;
 }
+  
+  .card.horizontal .card-image {
+    max-width: 36%!important;
+}
 
 
 @media screen and (max-width: 400px) {
