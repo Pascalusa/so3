@@ -21,7 +21,10 @@
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet"> 
-
+  
+  <!--   http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html -->
+  <!-- https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css -->
+  
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" /> 
     <title>So Lunch</title>
   <!--Import Google Icon Font-->

@@ -137,9 +137,6 @@
     top: 33px;
 }
 
-#instafeed a:hover{
-  opacity: .6;
-}
 </style>
 
  <!--Import jQuery before materialize.js-->
@@ -149,11 +146,11 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
       <script type="text/javascript">
         var feed = new Instafeed({
-            userId:5938852719, 
-            accessToken: '5938852719.1677ed0.ef5e406a6dcf4ca999da116681aa2c3f', 
+            userId:4915822408, 
+            accessToken: '4915822408.1677ed0.034958fc08be4df988d38305167b629f', 
             get: 'user',
             resolution: 'low_resolution',
-            limit: 10,
+            limit: 91,
             template: '<a href="{{link}}" target="_blank" style="background: white url({{image}}); background-size: cover;"></a>'
           });
           feed.run();

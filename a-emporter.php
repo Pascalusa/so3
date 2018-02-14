@@ -69,11 +69,11 @@ wp_insert_post($location_post);
             </div>
                       <!--Button Close-->
                        <a class="modal-action modal-close" style="position: relative; float: right; bottom: 204px;
-                    padding-right: 20px;"><span style="font-size: 1.5em; color:#fff;">X</span></a>
+                    padding-right: 20px;"><span style="font-size: 1.5em; color:#000;">X</span></a>
           </div>
 
               <!-- Modal Structure -->
-              <div id="modal10" class="modal modal-trigger" style="background-color: #4ab794e0!important; border-radius: 45px!important;">
+              <div id="modal10" class="modal modale modal-trigger" style="background-color: #4ab794e0!important; border-radius: 45px!important;">
                 
                 <!-- fermeture modale -->
                 <a class="modal-action modal-close" style="position: absolute; right: 0px;top: 3%; margin-right: 32px; z-index: 99;"><span style="font-size: 1.5em; color:#fff;">X</span></a>
@@ -83,7 +83,6 @@ wp_insert_post($location_post);
                       background-color: white; border-radius: 35px; top: 52px; border-bottom: 5px solid;">
 
                 <div class="modal-content" style="position: relative; bottom: 20px; height: 127px; background-color: #1f866996;">
-
                       <div class="row" style=" position: relative; top: 140px;">
                         <div class=" input-field col s12">
                           
@@ -97,36 +96,63 @@ wp_insert_post($location_post);
                           <label for="email">E-mail</label>
 
                         </div>
+                        <?php 
+                        // https://www.youtube.com/watch?v=BYNLXZyn9NU
+                        $aujourdhui = date( ' d / m / Y' );
+                        $demain = date( ' d / m / Y', time()+(24*3600) );
+                        $jour2 = date( ' d / m / Y', time()+(48*3600) );
+                        $jour3 = date( ' d / m / Y', time()+(72*3600) );
+                        $jour4 = date( ' d / m / Y ', time()+(96*3600) );
+                        $jour5 = date( ' d / m / Y ', time()+(120*3600) );
+                        $jour6 = date( ' d / m / Y ', time()+(144*3600) );
+                        
+                        ?>
                         <div class="col s12 m12 l6">     
                           <div class="input-field col s12">
-                            <select>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
+                            <select  id="jour" name="jour">
+                              <option value="<?php echo $aujourdhui;?>">Aujourd'hui</option>
+                              <option value="<?php echo $demain;?>">Demain</option>
+                              <option value="<?php echo $jour2;?>"><?php echo $jour2;?></option>
+                              <option value="<?php echo $jour3;?>"><?php echo $jour3;?></option>
+                              <option value="<?php echo $jour4;?>"><?php echo $jour4;?></option>
+                              <option value="<?php echo $jour5;?>"><?php echo $jour5;?></option>
                             </select>
-                            <label>Jour</label>
+                            <label>Jours <span style="color:red;">(Fermé le Dimanche) <span></label>
                           </div>
                        </div>
                         
                         <div class="col s12 m12 l6">   
                           <div class="input-field col s12">
-                            <select>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
+                            <select id="heure" name="heure">
+                              <option value="12_30">12:30 - 12:45</option>
+                              <option value="12_45">12:45 - 13:00</option>
+                              <option value="13_00">13:00 - 13:15</option>
+                              <option value="13_15">13:15 - 13:30</option>
+                              <option value="13_30">13:30 - 13:45</option>
+                              <option value="13_45">13:45 - 14:00</option>
+                              <option value="14_00">14:00 - 14:15</option>
+                              <option value="14_15">14:15 - 14:30</option>
+                              <option value="14_30">14:30 - 14:45</option>
+                              <option value="14_45">14:45 - 15:00</option>
+                              <option value="15_00">15:00 - 15:15</option>
+                              <option value="15_15">15:15 - 15:30</option>
+                              <option value="15_30">15:30 - 15:45</option>
+                              <option value="18_00">18:00 - 18:15</option>
+                              <option value="18_15">18:15 - 18:30</option>
+                              <option value="18_30">18:30 - 18:45</option>
+                              <option value="18_45">18:45 - 19:00</option>
+                              <option value="19_00">19:00 - 19:15</option>
                             </select>
-                            <label>Date</label>
+                            <label>Horaires</label>
                           </div>
                         </div>  
                             
                         <div class="col s12 m12 l6">
                             <div class="input-field col s12">
-                              <select>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                              <select id="point d'enlèvement" name="point d'enlèvement">
+                                <option value="So Lunch restaurant">So Lunch restaurant</option>
                               </select>
-                              <label>L'heure</label>
+                              <label>-- Point d'enlèvement --</label>
                             </div>
                         </div>
                         
@@ -673,7 +699,7 @@ wp_insert_post($location_post);
   margin-left: 9px;
 }
      
-.modal{
+.modale{
   background-color: ;
   border-radius: 45px;
   width: 708px;
@@ -683,7 +709,7 @@ wp_insert_post($location_post);
 
       
  @media screen and (max-width: 600px) {
-  .modal{
+  .modale{
     width: 100%!important;
 }
 }       
@@ -852,10 +878,17 @@ get_template_part( 'footer-for-page' );?>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
 <script>
-
+    (function($){
+        $(window).on("load",function(){
+            $(" .modal-trigger").mCustomScrollbar({
+              theme: 'rounded-dark'
+            });
+        });
+    })(jQuery);
 </script>
-
+ -->
 
 <script>
         $(document).ready(function(){

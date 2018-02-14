@@ -236,45 +236,45 @@ function register_cpt_commande_en_lignes() {
 
 // --------------------------------------Instagramm-----------------------------------------
 
-add_action( 'init', 'register_cpt_instagram' );
+// add_action( 'init', 'register_cpt_instagram' );
 
-function register_cpt_instagram() {
+// function register_cpt_instagram() {
 
-	$labels = array(
-		'name' => __( 'Liste photos Instagram'),
-		'singular_name' => __( 'Photo'),
-		'add_new' => __( 'Ajouter une nouvelle photo'),
-		'add_new_item' => __( 'Ajouter une nouvelle photo'),
-		'edit_item' => __( 'Editer une Photos'),
-		'new_item' => __( 'Nouvelle photo'),
-		'view_item' => __( 'Voir la photo'),
-		'search_items' => __('Chercher les photos'),
-		'not_found' => __( 'Aucune photo trouvé.'),
-		'not_found_in_trash' => __( 'Aucune photo trouvé dans la corbeille'),
-		'parent_item_colon' => __( ''),
-		'menu_name' => __( 'Photos Instagram'),
-	);
+// 	$labels = array(
+// 		'name' => __( 'Liste photos Instagram'),
+// 		'singular_name' => __( 'Photo'),
+// 		'add_new' => __( 'Ajouter une nouvelle photo'),
+// 		'add_new_item' => __( 'Ajouter une nouvelle photo'),
+// 		'edit_item' => __( 'Editer une Photos'),
+// 		'new_item' => __( 'Nouvelle photo'),
+// 		'view_item' => __( 'Voir la photo'),
+// 		'search_items' => __('Chercher les photos'),
+// 		'not_found' => __( 'Aucune photo trouvé.'),
+// 		'not_found_in_trash' => __( 'Aucune photo trouvé dans la corbeille'),
+// 		'parent_item_colon' => __( ''),
+// 		'menu_name' => __( 'Photos Instagram'),
+// 	);
 
-	$args = array(
-		'labels' => $labels,
-		'hierarchical' => false,
-		'supports' => array( 'thumbnail', 'page-attributes', 'title' ),
-		'menu_icon' => 'dashicons-welcome-add-page',
-		'public' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'show_in_nav_menus' => true,
-		'publicly_queryable' => true,
-		'exclude_from_search' => true,
-		'has_archive' => false,
-		'query_var' => true,
-		'can_export' => true,
-		'rewrite' => true,
-		'capability_type' => 'page'
-	);
+// 	$args = array(
+// 		'labels' => $labels,
+// 		'hierarchical' => false,
+// 		'supports' => array( 'thumbnail', 'page-attributes', 'title' ),
+// 		'menu_icon' => 'dashicons-welcome-add-page',
+// 		'public' => true,
+// 		'show_ui' => true,
+// 		'show_in_menu' => true,
+// 		'show_in_nav_menus' => true,
+// 		'publicly_queryable' => true,
+// 		'exclude_from_search' => true,
+// 		'has_archive' => false,
+// 		'query_var' => true,
+// 		'can_export' => true,
+// 		'rewrite' => true,
+// 		'capability_type' => 'page'
+// 	);
 
-	register_post_type( 'instagram', $args );
-}
+// 	register_post_type( 'instagram', $args );
+// }
 
 
 
@@ -562,6 +562,17 @@ add_action( 'save_post', 'restriction_save' );
 
 /* ******************************************ERREUR NON AFFICHÉ LOGIN CONNEXION*************************************** */
 add_filter('login_errors', create_function('$a', "return null;"));
+
+// à l'initialisation de l'administration
+// on informe WordPress des options de notre thème
+
+add_action( 'admin_init', 'myThemeRegisterSettings' );
+
+function myThemeRegisterSettings( )
+{
+	register_setting( 'my_theme', 'background_color' ); // couleur de fond
+	register_setting( 'my_theme', 'text_color' );       // couleur du texte
+}
 
 /* ******************************************AIDE WORPRESS********************************************* */
 
