@@ -29,7 +29,6 @@ wp_insert_post($location_post);
 
 ?>
 
-
 <div class="globale-title1" style=" top: 120px; position: relative;  ">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hot-soup-bowl2.png" style="width: 85px;
        
@@ -117,7 +116,7 @@ wp_insert_post($location_post);
                               <option value="<?php echo $jour4;?>"><?php echo $jour4;?></option>
                               <option value="<?php echo $jour5;?>"><?php echo $jour5;?></option>
                             </select>
-                            <label>Jours <span style="color:red;">(Fermé le Dimanche) <span></label>
+                            <label>Jours <span style="color:red;">(Fermé le Dimanche et jours fériés) <span></label>
                           </div>
                        </div>
                         
@@ -315,9 +314,10 @@ wp_insert_post($location_post);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div id="<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip" >
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
                         </div> 
 
            <?php endwhile;?> 
@@ -331,7 +331,8 @@ wp_insert_post($location_post);
 
                         <div  id="veggies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span >  
                         </div> 
 
            <?php endwhile;?> 
@@ -345,7 +346,8 @@ wp_insert_post($location_post);
 
                         <div  id="proteine-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
                         </div> 
 
            <?php endwhile;?> 
@@ -359,7 +361,8 @@ wp_insert_post($location_post);
 
                         <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
                         </div> 
 
            <?php endwhile;?>
@@ -373,7 +376,8 @@ wp_insert_post($location_post);
 
                         <div  id="plus-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
                         </div> 
 
            <?php endwhile;?>
@@ -387,7 +391,8 @@ wp_insert_post($location_post);
 
                         <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                         <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                          <span style="font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</h5>  
                         </div> 
 
            <?php endwhile;?>
@@ -401,7 +406,8 @@ wp_insert_post($location_post);
 
                         <div  id="dessert-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><?php the_title();?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span>  
+                           <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</h5>   
                         </div> 
 
            <?php endwhile;?>
@@ -424,13 +430,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -461,13 +467,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="veggies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="veggies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -499,13 +505,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="proteine-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="proteine-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -537,13 +543,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="grainesetnoix-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="grainesetnoix-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -576,13 +582,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="plus-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="plus-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -616,13 +622,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="boissons-smoothies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="boissons-smoothies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -656,13 +662,13 @@ wp_insert_post($location_post);
                           <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="dessert-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php the_title();?>">
+                                                <input class="dessert-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
