@@ -44,7 +44,7 @@ Template Name:
       <!-- Debut modale 1l -->
  
 
-            <div id="openModal" class="modalDialog" class="animated pulse">
+            <div id="openModal" class="modalDialog">
               <div class="z-depth-5 a-emporter" style="background-color: rgba(255, 255, 255, 0);">
                 <a href="#close" title="Close" class="close ">X</a>
 

@@ -30,7 +30,7 @@
       
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
-                     <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a href="<?php bloginfo('url'); ?>/mentions-legales" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a></h6>
+                    <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a href="<?php bloginfo('url'); ?>/mentions-legales" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a> - <a href="<?php bloginfo('url'); ?>/CGV" style="color: #fff; font-family: 'Muli', sans-serif;">CGV</a></h6>
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
                     <div style=" margin-right: auto; margin-left: auto; width: 285px;margin-right: auto; margin-left: auto;  width: 285px;position: relative;top: 6px;">
@@ -65,7 +65,8 @@
                                   $query = new WP_Query($args); 
                                   while (  $query -> have_posts() ) : $query -> the_post(); ?>
                                   
-                                <div id='instafeed'></div>
+                                <div id='instafeed' style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
+                                    
                                   
 <!--                                   <figure class="snip1571">
                                     <?php the_post_thumbnail('small-thumbnails');?>
@@ -136,6 +137,8 @@
     width: 162px;
     top: 33px;
 }
+  
+  
 
 </style>
 
@@ -155,25 +158,10 @@
           });
           feed.run();
      </script>
-
-<!--        <script type="text/javaScript" >         
-           $(document).ready(function(){
-              $('.slider').slider();
-           });     
-       </script> -->
-
-
-
-
        <script type="text/javaScript" > 
            $(document).ready(function(){
               $(".side-nav").sideNav();
            });
-           
-            $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });
         
        </script>
 

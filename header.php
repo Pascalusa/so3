@@ -20,7 +20,10 @@
 
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet"> 
+  
+  <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css"/>
+<!--   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css"/> -->
   
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" /> 
     <title>So Lunch</title>
@@ -34,11 +37,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!-- https://static.pexels.com/photos/326278/pexels-photo-326278.jpeg
-https://static.pexels.com/photos/76093/pexels-photo-76093.jpeg
-https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg
-4NamcIqbjBZf -->
-
             <nav style="z-index:1 ; position: absolute; top: 0px; background-color: #ffffff00!important; box-shadow :0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0); border-bottom: 2px solid;">
               <div class="nav-wrapper">
                 <div class="row">
@@ -194,10 +192,6 @@ ul{
   margin-bottom:5px;
 }
 </style>
-
-   <!--  <div style="background-color: red!important; height: 45px; width: 100%; position: absolute; ">
-      <a href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" style="position: absolute; top: 250px;transform: translate(-50%); left: 50%; position: absolute;">kkkk</a>
-    </div>   -->
 
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

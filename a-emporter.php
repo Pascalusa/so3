@@ -38,12 +38,43 @@ wp_insert_post($location_post);
     left: 50%;"> 
 </div>    
 
-<form action="https://formspree.io/pascal.webdesigner@gmail.com" method="POST" style="position: relative;top: 90px;">
+<form action="https://formspree.io/pascal.webdesigner@gmail.com" method="POST" style="position: relative;top: 44px;">
   
   <!-- Modal Structure -->
-          <div id="modal11" class="modal">
-            <div class="modal-content" style="margin-top: 45px;">
-                      <div class="row" >
+          <div id="modal11" class="modal  animated tdPlopIn">
+            <div class="modal-content  z-depth-3" style="margin-top: 45px; margin-right:auto; margin-left:auto; background-color: white;
+    width: 285px;">
+               <img src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" style="height: 63px;
+    width: 63px;
+    position: absolute;
+    z-index: 99;
+    transform: translate(-50%);
+    left: 50%;
+    background-color: #ffffff;
+    border-radius: 35px;
+    top: 24px;">
+              <p>
+                <input type="checkbox" id="test1" onclick="toggleByClass('soja')" />
+                <label for="test1">SOJA</label>
+              </p>
+              <p>
+                <input type="checkbox" id="test2" onclick="toggleByClass('gluten')" />
+                <label for="test2">GLUTEN</label>
+              </p>
+              <p>
+                <input type="checkbox" id="test3" onclick="toggleByClass('produits-laitiers')" />
+                <label for="test3">PRODUIT LAITIERS</label>
+              </p>
+               <p>
+                <input type="checkbox" id="test4" onclick="toggleByClass('poisson')" />
+                <label for="test4">POISSON</label>
+               </p>
+              <p>
+                <input type="checkbox" id="test5" onclick="toggleByClass('viande')" />
+                <label for="test5">VIANDE</label>
+               </p>
+              
+<!--                       <div class="row" >
                         <div class="col s12  m12 l4 ">                  
                            <a onclick="toggleByClass('soja')" class="collection-item" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important;     border-radius: 20px; margin-right: auto; margin-left: auto; display: block;">SOJA</a>
                         </div>
@@ -54,25 +85,26 @@ wp_insert_post($location_post);
                              <a onclick="toggleByClass('produits-laitiers')" class="collection-item" style="border-radius: 20px; top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">PRODUIT LAITIERS</a> 
                         </div>
                       </div>
-
+ -->
                       <!-- Suite bouton -->
 
-                      <div class="row" style="width: 70%;" >
+<!--                       <div class="row" style="width: 70%;" >
                           <div class="col s12  m12 l4">
                               <a onclick="toggleByClass('poisson')" class="collection-item" style="top: 150px; padding: 7px 25px;border-radius: 20px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">POISSON</a>
                           </div>
                           <div class="col s12 m12 l4">
                                <a onclick="toggleByClass('viande')" class="collection-item" style="top: 150px; padding: 7px 25px;  border-radius: 20px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">VIANDE</a>
                           </div>
-                      </div>
-            </div>
-                      <!--Button Close-->
+                      </div> -->
+              <!--Button Close-->
                        <a class="modal-action modal-close" style="position: relative; float: right; bottom: 204px;
                     padding-right: 20px;"><span style="font-size: 1.5em; color:#000;">X</span></a>
+            </div>
+                      
           </div>
 
               <!-- Modal Structure -->
-              <div id="modal10" class="modal modale modal-trigger" style="background-color: #4ab794e0!important; border-radius: 45px!important;">
+              <div id="modal10" class="modal modale modal-trigger animated tdPlopIn open" style="background-color: #4ab794e0!important; border-radius: 45px!important;">
                 
                 <!-- fermeture modale -->
                 <a class="modal-action modal-close" style="position: absolute; right: 0px;top: 3%; margin-right: 32px; z-index: 99;"><span style="font-size: 1.5em; color:#fff;">X</span></a>
@@ -110,10 +142,15 @@ wp_insert_post($location_post);
                           <div class="input-field col s12">
                             <select  id="jour" name="jour">
                               <option value="<?php echo $aujourdhui;?>">Aujourd'hui</option>
+                              <li><div class="divider"></div></li>
                               <option value="<?php echo $demain;?>">Demain</option>
+                              <li><div class="divider"></div></li>
                               <option value="<?php echo $jour2;?>"><?php echo $jour2;?></option>
+                             <li><div class="divider"></div></li>
                               <option value="<?php echo $jour3;?>"><?php echo $jour3;?></option>
+                              <li><div class="divider"></div></li>
                               <option value="<?php echo $jour4;?>"><?php echo $jour4;?></option>
+                              <li><div class="divider"></div></li>
                               <option value="<?php echo $jour5;?>"><?php echo $jour5;?></option>
                             </select>
                             <label>Jours <span style="color:red;">(Fermé le Dimanche et jours fériés) <span></label>
@@ -123,24 +160,41 @@ wp_insert_post($location_post);
                         <div class="col s12 m12 l6">   
                           <div class="input-field col s12">
                             <select id="heure" name="heure">
-                              <option value="12_30">12:30 - 12:45</option>
-                              <option value="12_45">12:45 - 13:00</option>
-                              <option value="13_00">13:00 - 13:15</option>
-                              <option value="13_15">13:15 - 13:30</option>
-                              <option value="13_30">13:30 - 13:45</option>
-                              <option value="13_45">13:45 - 14:00</option>
-                              <option value="14_00">14:00 - 14:15</option>
-                              <option value="14_15">14:15 - 14:30</option>
-                              <option value="14_30">14:30 - 14:45</option>
-                              <option value="14_45">14:45 - 15:00</option>
-                              <option value="15_00">15:00 - 15:15</option>
-                              <option value="15_15">15:15 - 15:30</option>
-                              <option value="15_30">15:30 - 15:45</option>
-                              <option value="18_00">18:00 - 18:15</option>
-                              <option value="18_15">18:15 - 18:30</option>
-                              <option value="18_30">18:30 - 18:45</option>
-                              <option value="18_45">18:45 - 19:00</option>
-                              <option value="19_00">19:00 - 19:15</option>
+                              <option value="12:30 - 12:45">12:30 - 12:45</option>
+                              <li><div class="divider"></div></li>
+                              <option value="12:45 - 13:00">12:45 - 13:00</option>
+                              <li><div class="divider"></div></li>
+                              <option value="13:00 - 13:15">13:00 - 13:15</option>
+                              <li><div class="divider"></div></li>
+                              <option value="13:15 - 13:30">13:15 - 13:30</option>
+                              <li><div class="divider"></div></li>
+                              <option value="13:30 - 13:450">13:30 - 13:45</option>
+                              <li><div class="divider"></div></li>
+                              <option value="13:45 - 14:00">13:45 - 14:00</option>
+                              <li><div class="divider"></div></li>
+                              <option value="14:00 - 14:15">14:00 - 14:15</option>
+                              <li><div class="divider"></div></li>
+                              <option value="14:15 - 14:30">14:15 - 14:30</option>
+                              <li><div class="divider"></div></li>
+                              <option value="14:30 - 14:45">14:30 - 14:45</option>
+                              <li><div class="divider"></div></li>
+                              <option value="14:45 - 15:00">14:45 - 15:00</option>
+                              <li><div class="divider"></div></li>
+                              <option value="15:00 - 15:15">15:00 - 15:15</option>
+                              <li><div class="divider"></div></li>
+                              <option value="15:15 - 15:30">15:15 - 15:30</option>
+                              <li><div class="divider"></div></li>
+                              <option value="15:30 - 15:45">15:30 - 15:45</option>
+                              <li><div class="divider"></div></li>
+                              <option value="18:00 - 18:15">18:00 - 18:15</option>
+                              <li><div class="divider"></div></li>
+                              <option value="18:15 - 18:30">18:15 - 18:30</option>
+                              <li><div class="divider"></div></li>
+                              <option value="18:30 - 18:45">18:30 - 18:45</option>
+                              <li><div class="divider"></div></li>>
+                              <option value="18:45 - 19:00">18:45 - 19:00</option>
+                              <li><div class="divider"></div></li>
+                              <option value="19:00 - 19:15">19:00 - 19:15</option>
                             </select>
                             <label>Horaires</label>
                           </div>
@@ -172,7 +226,7 @@ wp_insert_post($location_post);
               <!-- fin modale -->
               <div>
 
-                  <div class="row" style="width: 300px;position: relative; top: 152px;z-index: 1000;">
+                  <div class="row" style="width: 300px;position: relative; top: 202px;z-index: 1000;">
                     <div class="col s12 l6">
                       
                     <a class="modal-trigger" href="#modal10" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
@@ -201,6 +255,7 @@ wp_insert_post($location_post);
     left: 50%!important;
     position: absolute!important;
     width: 100%;
+                                         
     top: 215px!important;">
 
         <div class="row hide-on-med-and-down" style="width: 100%; height: 400px!important;">
@@ -210,39 +265,66 @@ wp_insert_post($location_post);
     position: absolute!important;
     width: 787px;
     padding-left: 45px;
-    top: 96px;">
+    top: 90px;">
+                  
+                  
+                  
+                  <div class="pindicator">
+  <div class="bullet past">
+    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
+     <!--     base     -->
+  </div>
+  <div class="bullet current">
+    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
+  </div>
+  <div class="bullet next future">
+    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
+  </div>
+  <div class="bullet future">
+    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
+  </div>
+  <div class="bullet future">
+   <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
+  </div>
+  <div class="bullet future">
+    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
+  </div>
+   <div class="bullet future">
+    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
+  </div>                 
+                    
+</div>
    
-                  <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><!-- <h6 style="text-align: center;">base</h6> -->
+<!--                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
+                    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
 
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Veggies</h6> -->
+                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
                   <div class="tab col  s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
                     <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" >
-                    <!-- proteine -->
+                   
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px;top: 15px;position: relative;right: 10px;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7;  height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les graines et les Noix</h6> -->
+                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><!-- <h6 style="text-align: center;">Les plus</h6> -->
+                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" >
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
                   </div>
                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Les Assaisonnements  <span style="position: relative; top: 25px;
-                    right: 145px;">Boissons & Smooties</span></h6>  -->
+                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
                   </div>
                   <div class="col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><!-- <h6 style="text-align: center;">Desserts</h6> -->
+                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
-                  </div>
+                  </div> -->
               </div>     
             </div>     
           </div>
@@ -693,6 +775,91 @@ wp_insert_post($location_post);
 </form>  
 
     <style> 
+      
+  #modal11 {
+    background-color:#ff000000;
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
+}
+
+      
+      .pindicator {
+  display: flex;
+  margin: 2rem auto 0;
+  width: 30rem;
+}
+.pindicator .bullet {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+.pindicator .bullet::before,
+.pindicator .bullet::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: .5rem;
+  top: 1.25rem;
+  transform: translate3d(0,0,-1px);
+}
+.pindicator .bullet::before {
+  background-color: lightgray;
+  width: 100%;
+}
+.pindicator .bullet::after {
+  background-color: #abd3a6;
+  transition: opacity .25s ease-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.pindicator .bullet:first-child::before,
+.pindicator .bullet:first-child::after {
+  left: 50%;
+  width: 50%;
+}
+.pindicator .bullet:last-child::before,
+.pindicator .bullet:last-child::after {
+  width: 50%;
+}
+
+.pindicator .icon {
+  background-color: lightgray;
+  border-radius: 100%;
+  color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: inline-block;
+  height: 2em;
+  line-height: 2;
+  text-align: center;
+  transition: background-color .25s ease-out;
+  width: 2em;
+}
+.pindicator .text {
+  color: lightgray;
+  font-size: .75rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  transition: background-color .25s ease-out;
+}
+.pindicator .past .icon,
+.pindicator .current .icon {
+  background-color: #abd3a6;
+  color: white;
+}
+
+.pindicator .past::after,  
+.pindicator .current::after {
+  opacity: 1;
+}
+
+.pindicator .past .text,
+.pindicator .current .text,
+.pindicator .next .text,{
+  color: #abd3a6;
+}
 
 .switch label input[type=checkbox]:checked+.lever:after {
     background-color: #abd3a6!important;
@@ -884,17 +1051,6 @@ get_template_part( 'footer-for-page' );?>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
-<script>
-    (function($){
-        $(window).on("load",function(){
-            $(" .modal-trigger").mCustomScrollbar({
-              theme: 'rounded-dark'
-            });
-        });
-    })(jQuery);
-</script>
- -->
 
 <script>
         $(document).ready(function(){
@@ -931,6 +1087,64 @@ get_template_part( 'footer-for-page' );?>
     $('#modal11').modal();
     $('#modal10').modal();
   });
+  
+  console.clear();
+(function() {
+  "use strict";
+
+  var bulletClasses = {
+    elements: {
+      container: ".pindicator",
+      bullet: ".bullet",
+    },
+    helpers: {
+      past: "past",
+      current: "current",
+      next: "next",
+      future: "future",
+    }
+  };
+  
+  var bulletEls;
+  document.addEventListener("DOMContentLoaded", initBullets);
+
+  function initBullets() {
+    bulletEls = Array.prototype.slice.call(
+      document.body.querySelectorAll(bulletClasses.elements.bullet)
+    );
+    bulletEls.forEach(function(el) {
+      el.addEventListener("mousedown", function(event) {
+        gotoPage(bulletEls.indexOf(this) + 1);
+      });
+      el.addEventListener("touchstart", function(event) {
+        event.preventDefault();
+        gotoPage(bulletEls.indexOf(this) + 1);
+      });
+    });
+  }
+
+  function gotoPage(pageNum) {
+    bulletEls.forEach(function(e) {
+      e.classList.remove.apply(e.classList,
+        Object.keys(bulletClasses.helpers).map(function(e){
+          return bulletClasses.helpers[e];
+        })
+      )
+    });
+    bulletEls[pageNum - 1].classList.add(bulletClasses.helpers.current);
+    if(pageNum > 1) {
+      for(var i = 0; i < pageNum; i++) {
+        bulletEls[i].classList.add(bulletClasses.helpers.past);
+      }
+    }
+    if(pageNum < bulletEls.length) {
+      bulletEls[pageNum].classList.add(bulletClasses.helpers.next);
+      for(var i = bulletEls.length - 1; i >= pageNum; i--) {
+        bulletEls[i].classList.add(bulletClasses.helpers.future);
+      }
+    }
+  }
+})();
 </script>
         
      
