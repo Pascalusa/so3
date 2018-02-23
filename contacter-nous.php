@@ -10,7 +10,7 @@ Template Name: Contact
 <body <?php body_class(); ?>  style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/background-1.png); background-repeat: no-repeat; background-position:center center; background-size: cover; height: 100vh;">
 
    <!-- Partie form contact -->
-      <div class="globale-contact z-depth-4" style="background-color: rgba(247, 237, 237, 0.58); height: 88vh; width: 50%; position: relative; margin-left: auto; margin-right: auto; top: 62px;">
+      <div class="globale-contact z-depth-4" style="background-color: rgba(247, 237, 237, 0.58); height: 88vh; position: relative; margin-left: auto; margin-right: auto; top: 62px;">
           <div>
              <h4 class="tittle-contact"  name="From So Lunch page Contact"  style="color: #fff; margin-top: 56px; transform: translate(-50%)!important; left: 50%!important; position: absolute!important; font-family: 'Muli', sans-serif;">Contactez-nous</h4>
           </div>   
@@ -80,10 +80,25 @@ get_template_part( 'footer2' );?>
 
 
   <style>
+    
+    .globale-contact{
+      width:50%;
+    }
   @media screen and (max-width: 995px) {
   .globale-form {
     width: 100%!important;
 }
+     @media screen and (max-width: 1024px) {
+    .globale-contact {
+      width:70%!important;
+       }
+    }
+       
+      @media screen and (max-width: 480px) {
+  .tittle-contact {
+    font-size:1.4em!important;
+}
+        
 @media screen and (max-width: 1015px) {
   .globale-contact {
     width: 100%!important;

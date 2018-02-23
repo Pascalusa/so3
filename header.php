@@ -37,7 +37,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-            <nav style="z-index:1 ; position: absolute; top: 0px; background-color: #ffffff00!important; box-shadow :0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0); border-bottom: 2px solid;">
+            <nav class="nav-nav" style="z-index:1;  background-color:rgba(191, 25, 25, 0)!important; position: absolute; top: 0px; box-shadow :0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0); border-bottom: 2px solid;">
               <div class="nav-wrapper">
                 <div class="row">
                     <ul id="" class="right hide-on-med-and-down" style="font-family: 'Muli', sans-serif; z-index: 999; width: 100%;">
@@ -94,7 +94,7 @@
           background-color: #ffffff;" >
          </div>  
 
-          <div id="sidebar" class="hide-on-large-only">
+          <div id="sidebar" class="hide-on-large-only" style="z-index: 1000;">
         <ul>
          
          <div style=" margin-right: auto; margin-left: auto;">
@@ -124,12 +124,6 @@
             </div>  
       </div>
 <style>
-  
-  nav {
-    -ms-background-color:#ffffff00!important;
-} 
-  
-  
 .commander {
     float: right;
 } 

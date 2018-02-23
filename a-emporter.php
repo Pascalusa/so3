@@ -211,16 +211,14 @@ wp_insert_post($location_post);
                         
                       </div>
                       <!-- buton valider -->
-                       <div class="col s12 l12 " style="top: 130px;
-    position: relative;">
+                       <div class="col s12 l12 " style="top: 130px; position: relative;">
                          <input style="border: 2px solid; font-weight: 800!important; margin-left: auto; display: block; background-color: #7bb6a4;
                          margin-right: auto;" type="submit" class="btn" value="Valider" target="_blank" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
-                         <input type="hidden" name="_next" value="//site.io/thanks.html" />
                          <input type="hidden" name="_subject" value="Nouvelle réservation client!"/>
                          <input type="hidden" name="_cc" value="" />
                          <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com" />
                          <input type="text" name="_gotcha" style="display:none" />
-                    </div>
+                      </div>
                 </div>
               </div> 
               <!-- fin modale -->
@@ -229,7 +227,7 @@ wp_insert_post($location_post);
                   <div class="row" style="width: 300px;position: relative; top: 202px;z-index: 1000;">
                     <div class="col s12 l6">
                       
-                    <a class="modal-trigger" href="#modal10" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
+                    <a class="modal-trigger reservation" href="#modal10" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
 
                     </div>
                     <div class="col s12 l6">  
@@ -1025,15 +1023,14 @@ height: 600px!important;
 height: 496px!important;
 }
 }
-/*#reservation {
-  position: relative!important;
-  top: 45px!important;
-}*/
 
 @media screen and (max-width: 400px) {
   h4 {
     font-size: 1.8em!important;
-}
+  }
+  .reservation{
+    width: 121px!important;
+  }
 
 }
 
