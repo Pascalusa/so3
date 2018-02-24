@@ -1,33 +1,34 @@
 <?php 
 
 // Si envoyé, analyser les données du formulaire et les stockers dans les variables.
-if(isset($_POST['submit'])) {
+// if(isset($_POST['submit'])) {
 
-$name = htmlspecialchars($_POST['Nom_du_client']);
-$mail = htmlspecialchars($_POST['E-mail_du_client']);
-$date = htmlspecialchars($_POST['Date']);
-$horaire = htmlspecialchars($_POST['Tranche_horaire']);
-$menu = htmlspecialchars($_POST['menu']);
+// $name = htmlspecialchars($_POST['Nom_du_client']);
+// $mail = htmlspecialchars($_POST['E-mail_du_client']);
+// $date = htmlspecialchars($_POST['Date']);
+// $horaire = htmlspecialchars($_POST['Tranche_horaire']);
+// $menu = htmlspecialchars($_POST['menu']);
 
-// Mosaik Créer un fichier de type 'contact'
-$location_post = array(
-'post_title' =>  "$name || $mail",
-'post_content' => "  Nom du client :  $name 
-                  -----------------------
-                  Email du client : $mail  
-                  -----------------------
-                  Date : $date
-                  -----------------------
-                  Tranche horaire : $horaire 
-                  -----------------------
-                  Menu : $menu " ,
-'post_type' => "reservation",
-'post_status' => "publish"
-  );
-wp_insert_post($location_post);
-}
+// // Mosaik Créer un fichier de type 'contact'
+// $location_post = array(
+// 'post_title' =>  "$name || $mail",
+// 'post_content' => "  Nom du client :  $name 
+//                   -----------------------
+//                   Email du client : $mail  
+//                   -----------------------
+//                   Date : $date
+//                   -----------------------
+//                   Tranche horaire : $horaire 
+//                   -----------------------
+//                   Menu : $menu " ,
+// 'post_type' => "reservation",
+// 'post_status' => "publish"
+//   );
+// wp_insert_post($location_post);
+// }
 
-?>
+// ?>
+
 
 <div class="globale-title1" style=" top: 120px; position: relative;  ">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hot-soup-bowl2.png" style="width: 85px;
@@ -122,8 +123,9 @@ wp_insert_post($location_post);
                          
                         </div>
                         <div class=" input-field col s12">
-                          
-                          <input id="email" type="email" name="E-mail_du_client" class="validate" style="border-bottom: 2px solid #000!important;">
+                          <?php $email ="email";?>
+                          <input type="hidden" name="_next" value="<?php bloginfo('url'); ?>/commander-en-ligne/" />
+                          <input id="email" type="email" name="_cc" name="<?php echo $email;?>" class="validate" style="border-bottom: 2px solid #000!important;">
                           <label for="email">E-mail</label>
 
                         </div>
@@ -214,9 +216,8 @@ wp_insert_post($location_post);
                        <div class="col s12 l12 " style="top: 130px; position: relative;">
                          <input style="border: 2px solid; font-weight: 800!important; margin-left: auto; display: block; background-color: #7bb6a4;
                          margin-right: auto;" type="submit" class="btn" value="Valider" target="_blank" style="font-family: 'Josefin Sans', sans-serif; transform: translate(-50%); left: 50%;  position: absolute;">
-                         <input type="hidden" name="_subject" value="Nouvelle réservation client!"/>
+                         <input type="hidden" name="_subject" value="Nouvelle réservation"/>
                          <input type="hidden" name="_cc" value="" />
-                         <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com" />
                          <input type="text" name="_gotcha" style="display:none" />
                       </div>
                 </div>
