@@ -83,7 +83,7 @@
 
             <!-- menu mobile -->
 
-            <div  class="hide-on-large-only" style=" position: absolute; top: 0px; z-index: 777; width:100%; ">
+<!--             <div  class="hide-on-large-only" style=" position: absolute; top: 0px; z-index: 777; width:100%; ">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" style="    width: 109px;
           margin-right: auto;
           margin-left: auto;
@@ -91,7 +91,22 @@
           display: block;
           padding: 4px;
           background-color: #ffffff;" >
-         </div>  
+         </div>   -->
+   
+          <div class="hide-on-large-only" style="    width: 100px;
+                       height: 100px;
+          margin-right: auto;
+          margin-left: auto;
+                      z-index: 992;
+                      position: absolute;
+
+                  transform: translate(-50%); left: 50%;
+          border-radius: 50%;
+          display: block;
+          background-color: #ffffff;" > <img src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" style=" WIDTH: 105PX;
+    POSITION: RELATIVE;
+    TOP: -6PX;
+    RIGHT: 0PX;" ></div>
 
           <div id="sidebar" class="hide-on-large-only" style="z-index: 1000;">
         <ul>

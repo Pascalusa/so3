@@ -15,7 +15,7 @@
  
 
 
-
+<!-- | Design BY -->
 
 </section>
  <footer style="background-color: #abd3a8;
@@ -30,7 +30,7 @@
       
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
-                    <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a href="<?php bloginfo('url'); ?>/mentions-legales" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a> - <a href="<?php bloginfo('url'); ?>/CGV" style="color: #fff; font-family: 'Muli', sans-serif;">CGV</a></h6>
+                    <h6 style="text-align: center; position: relative; top: 7px; color: #fff;font-family: 'Muli', sans-serif;  "> © Copyright all rights reserveds - <a href="<?php bloginfo('url'); ?>/mentions-legales" style="color: #fff; font-family: 'Muli', sans-serif;">Mention Légales</a> - <a href="<?php bloginfo('url'); ?>/CGV" style="color: #fff; font-family: 'Muli', sans-serif;">CGV</a> </h6> 
                   </div>
                   <div class="col s12 m12 l4" style="height: 100%;">
                     <div style=" margin-right: auto; margin-left: auto; width: 285px;margin-right: auto; margin-left: auto;  width: 285px;position: relative;top: 6px;">
