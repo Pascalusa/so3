@@ -11,11 +11,7 @@
 
 ?>       
 
-
- 
-
-
-<!-- | Design BY -->
+<!-- | Design by -->
 
 </section>
  <footer style="background-color: #abd3a8;

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 
+
 */
 /**
  * @package So_Lunch
@@ -88,7 +88,7 @@ Template Name:
                 <div class="col s12">
                   <ul class="tabs" id="tab-commander" style="background-color: rgba(253, 253, 253, 0); height: 190px; position: relative; top: 150px; overflow-x: hidden;">
 
- <label class="dropdown-commander hide-on-large-only">
+<!--  <label class="dropdown-commander hide-on-large-only">
 
   <div class="dd-button">
     Menu
@@ -123,7 +123,7 @@ Template Name:
   </ul>
   
 </label>
-
+ -->
 
 <div>
 
@@ -541,7 +541,6 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
     bottom: 30px;
     height: 90%;
     overflow-x: hidden;
-    background-color: #ff9100!important;
 }
 }
 

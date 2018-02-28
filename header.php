@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet"> 
   
+  <!--  ANIMATION magic.min -->
   <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css"/>
 <!--   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css"/> -->
   
@@ -54,12 +55,9 @@
                       <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Contact</a></li> -->   
 
 
-                     <div style=" background-color: ;
+                     <div style=" 
     position: relative;
-    height: 90px;
-    /* float: right; */
-    /* width: 100%; */
-}"> 
+    height: 90px;"> 
                            <?php 
                                 
                                 wp_nav_menu( array(

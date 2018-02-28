@@ -231,7 +231,7 @@
                     <a class="modal-trigger reservation" href="#modal10" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
 
                     </div>
-                    <div class="col s12 l6">  
+                    <div class="col s12 l6" id="diet">  
 
                     <a data-position="top" data-delay="50" data-tooltip='Indiquez vos restrictions alimentaires'  class="waves-effect modal-trigger tooltipped" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 999;
                       border: 2px solid white; color: #fff;">DIET</a>
@@ -257,7 +257,7 @@
                                          
     top: 215px!important;">
 
-        <div class="row hide-on-med-and-down" style="width: 100%; height: 400px!important;">
+        <div class="row " style="width: 100%; height: 400px!important;">
               <div class=" col s12 m12 l10" style="transform: translate(-50%)!important; left: 50%!important; position: absolute!important;">
                 <div class="global-tab2" style="transform: translate(-50%)!important;
     left: 50%!important;
@@ -267,33 +267,59 @@
     top: 90px;">
                   
                   
-                  
-                  <div class="pindicator">
-  <div class="bullet past">
-    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
-     <!--     base     -->
-  </div>
-  <div class="bullet current">
-    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
-  </div>
-  <div class="bullet next future">
-    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
-  </div>
-  <div class="bullet future">
-    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
-  </div>
-  <div class="bullet future">
-   <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
-  </div>
-  <div class="bullet future">
-    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
-  </div>
-   <div class="bullet future">
-    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
-  </div>                 
+               <div class="hide-on-med-and-down">
+                  <div class="pindicator hide-on-med-and-down">
+                        <div class="bullet past">
+                          <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
+                           <!--     base     -->
+                        </div>
+                        <div class="bullet current">
+                          <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
+                        </div>
+                        <div class="bullet next future">
+                          <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
+                        </div>
+                        <div class="bullet future">
+                          <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
+                        </div>
+                        <div class="bullet future">
+                         <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
+                        </div>
+                        <div class="bullet future">
+                          <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
+                        </div>
+                         <div class="bullet future">
+                          <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
+                        </div>                 
                     
-</div>
-   
+                </div>
+              </div>    
+                    <!--  MOBILE   -->
+                   <div class="pindicator hide-on-large-only">
+                        <div class="bullet past">
+                          <a href="#g0" data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
+                           <!--     base     -->
+                        </div>
+                        <div class="bullet current" >
+                          <a href="#g1" data-position="right" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
+                        </div>
+                        <div class="bullet next future">
+                          <a href="#g2" data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
+                        </div>
+                        <div class="bullet future">
+                          <a href="#g3" data-position="right" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
+                        </div>
+                        <div class="bullet future">
+                         <a href="#g4"  data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
+                        </div>
+                        <div class="bullet future">
+                          <a href="#g5" data-position="right" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
+                        </div>
+                         <div class="bullet future">
+                          <a href="#g6" data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
+                        </div>                 
+
+                     </div>
 <!--                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
                     <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
@@ -330,41 +356,7 @@
         
 
 
-         <!-- Version mobile -->
-          <div class="row hide-on-large-only reservation-emporter" style="width: 100%; height: 400px!important; ">
-
-              <div>
-                <ul class="row emporter-mobile" style="">
-                <!-- base -->
-                  <li class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g0"><?php  echo get_cat_name(1);?></a></li>
-                  <!-- veggies -->
-                  <li class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g1"><?php  echo get_cat_name(2);?></a></li>
-                  <div class="divider"></div>
-                  <!-- proteine -->
-                  <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g2"><?php  echo get_cat_name(3);?></a></li>
-                  <div class="divider"></div>
-                  <!-- graines -->
-                  <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g3"><?php  echo get_cat_name(4);?></a></li>
-                  <div class="divider"></div>
-                  <!-- pluss -->
-                  <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g4"><?php  echo get_cat_name(5);?></a></li>
-                  <div class="divider"></div>
-                  <!-- boisson smoothie -->
-                  <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g5"><?php  echo get_cat_name(6);?></a></li>
-                  <div class="divider"></div>
-                  <!-- dessert -->
-                 <li  class="z-depth-3 col s12" style="background-color: white; padding: 25px;
-                  text-align: center;"><a href="#g5"><?php  echo get_cat_name(7);?></a></li>
-                </ul>
-              </div> 
-                          
-          </div>
+        
 
           <div class="row first-tab hide-on-large-only">
               <li class="tab col  l2"><a class="active" href="#g0">hdh</a></li>
@@ -395,7 +387,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div id="<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip" >
+                        <div id="<?php the_title();?>" style="display: none; background-color: #fbe9e7;" class="chip" >
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
@@ -410,7 +402,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="veggies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div  id="veggies-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span >  
@@ -425,7 +417,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="proteine-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div  id="proteine-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
@@ -440,7 +432,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                            <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
@@ -455,7 +447,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="plus-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div  id="plus-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                            <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
@@ -470,7 +462,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span style="font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</h5>  
@@ -485,7 +477,7 @@
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
-                        <div  id="dessert-<?php the_title();?>" style="display: none; background-color: #FFF;" class="chip">
+                        <div  id="dessert-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                            <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
                             <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</h5>   
@@ -775,6 +767,23 @@
 
     <style> 
       
+      
+      .cadre-ingredient{
+        background-color: red; height: 96px; width: 197px; margin-right: auto;
+                              margin-left: auto;margin-top: 55px; border-bottom: 2px solid black;
+      }
+      
+      .text-ingredient{
+            position: !important;
+    top: 74px!important;
+    text-align: center!important; 
+      }
+      
+      .circle-ingredient{
+             background-color: white!important; padding: 25px!important;
+                          border-radius: 50%!important; width: 66px!important; height: 66px!important; position: absolute!important; transform: translate(-50%)!important;left: 50%!important;
+      }     
+      
   #modal11 {
     background-color:#ff000000;
     -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
@@ -785,7 +794,7 @@
       .pindicator {
   display: flex;
   margin: 2rem auto 0;
-  width: 30rem;
+  width: 47rem;
 }
 .pindicator .bullet {
   flex: 1;
@@ -921,6 +930,15 @@
     bottom: -90px;
 }    
 
+      @media screen and (max-width: 706px) {
+  .pindicator .bullet::after {
+    background-color: #abd3a6;
+    transition: opacity .25s ease-out;
+    opacity: 0;
+    width: 100%;
+    
+}
+}
       
 
       @media screen and (max-width: 992px) {
@@ -928,11 +946,25 @@
     position: relative!important;
     margin-top: 45px!important;
 }
+        #diet{
+              position: absolute!important;
+    transform: translate(-50%)!important;
+    left: 77%!important;
+    top: 58px!important;
+        }
+        
+        .pindicator .bullet::after {
+    display: none!important;
+ }
+        
+        .pindicator .bullet::before {
+    display: none!important;
+}
         
   .globale-snipped-price {
-    top: 800px!important;
+    top: 690px!important;
 }
-            
+  
 
 .global-tab-mobile {
       position: relative;
@@ -1010,9 +1042,14 @@ input[type=email]:not(.browser-default) {
   padding-left: 35px!important;
 }
   
+  .pindicator{
+    display:block!important;
+    width: 137px!important;
+  }
+  
 .first-tab2 {
     position: relative!important;
-    top: 757px!important;
+    top: 550px!important;
 }
  
 .tab{
