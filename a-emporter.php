@@ -105,7 +105,7 @@
           </div>
 
               <!-- Modal Structure -->
-              <div id="modal10" class="modal modale modal-trigger animated tdPlopIn open" style="background-color: #4ab794e0!important; border-radius: 45px!important;">
+              <div id="modal10" class="modal modale modal-trigger animated tdPlopIn open" style=" background-color: #4ab794e0!important; border-radius: 45px!important;">
                 
                 <!-- fermeture modale -->
                 <a class="modal-action modal-close" style="position: absolute; right: 0px;top: 3%; margin-right: 32px; z-index: 99;"><span style="font-size: 1.5em; color:#fff;">X</span></a>
@@ -225,7 +225,7 @@
               <!-- fin modale -->
               <div>
 
-                  <div class="row" style="width: 300px;position: relative; top: 202px;z-index: 1000;">
+                  <div class="row" style="width: 300px;position: relative; top: 202px;z-index: 20;">
                     <div class="col s12 l6">
                       
                     <a class="modal-trigger reservation" href="#modal10" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
@@ -233,7 +233,7 @@
                     </div>
                     <div class="col s12 l6" id="diet">  
 
-                    <a data-position="top" data-delay="50" data-tooltip='Indiquez vos restrictions alimentaires'  class="waves-effect modal-trigger tooltipped" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 999;
+                    <a data-position="top" data-delay="50" data-tooltip='Indiquez vos restrictions alimentaires'  class="waves-effect modal-trigger tooltipped" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 29;
                       border: 2px solid white; color: #fff;">DIET</a>
 
                     <!-- restriction transform: translate(-50%); position: absolute; left: 50%;-->
@@ -249,13 +249,12 @@
     bottom: 155px;">
 
       <ul class="tabs " id="tab2" style="overflow: hidden;
-    height: 500pximportant;
+    height: 200px;
     transform: translate(-50%)!important;
     left: 50%!important;
     position: absolute!important;
     width: 100%;
-                                         
-    top: 215px!important;">
+    ">
 
         <div class="row " style="width: 100%; height: 400px!important;">
               <div class=" col s12 m12 l10" style="transform: translate(-50%)!important; left: 50%!important; position: absolute!important;">
@@ -263,100 +262,88 @@
     left: 50%!important;
     position: absolute!important;
     width: 787px;
-    padding-left: 45px;
-    top: 90px;">
+    padding-left: 45px;">
                   
+                <div class="z-depth-3 hide-on-large-only" style=" background-color:#abd3a6;
+    width: 185px;
+    height: 259px;
+    bottom:15px;
+    padding-top: 26px;
+    padding-left: 45px; border-radius:20px;">
+                  <ul>
+                    <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g0"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(12);?></a></li>
+                                        <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g1"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(3);?></a></li>
+                                        <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g2"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(1);?></a></li>
+                                        <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g3"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(8);?></a></li>
+                                        <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g4"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(9);?></a></li>
+                                        <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g5"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(10);?></a></li>
+                                        <li style="    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;"><a href="#g6"><i class=" material-icons" style="font-size: 10px!important;
+                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(11);?></a></li>
+                  </ul>
+                <div>  
+                  
+                  
+
+                  <?php 
+                  $bases = get_cat_name(12);
+                  $veggies = get_cat_name(3);
+                  $proteines = get_cat_name(1);
+                  $graine = get_cat_name(8);
+                  $plus = get_cat_name(9);
+                  $assortiments = get_cat_name(10);
+                  $dessert = get_cat_name(11);
+                  ?>   
                   
                <div class="hide-on-med-and-down">
                   <div class="pindicator hide-on-med-and-down">
                         <div class="bullet past">
-                          <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
+                          <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo $bases;?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
                            <!--     base     -->
                         </div>
                         <div class="bullet current">
-                          <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
+                          <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo $veggies;?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
                         </div>
                         <div class="bullet next future">
-                          <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
+                          <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo $proteines;?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
                         </div>
                         <div class="bullet future">
-                          <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
+                          <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo $graine;?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
                         </div>
                         <div class="bullet future">
-                         <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
+                         <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo $plus;?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
                         </div>
                         <div class="bullet future">
-                          <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
+                          <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo $assortiments;?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
                         </div>
                          <div class="bullet future">
-                          <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
-                        </div>                 
-                    
-                </div>
+                          <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo $dessert;?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
+                        </div>                       
+                  </div>
               </div>    
-                    <!--  MOBILE   -->
-                   <div class="pindicator hide-on-large-only">
-                        <div class="bullet past">
-                          <a href="#g0" data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
-                           <!--     base     -->
-                        </div>
-                        <div class="bullet current" >
-                          <a href="#g1" data-position="right" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
-                        </div>
-                        <div class="bullet next future">
-                          <a href="#g2" data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
-                        </div>
-                        <div class="bullet future">
-                          <a href="#g3" data-position="right" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
-                        </div>
-                        <div class="bullet future">
-                         <a href="#g4"  data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
-                        </div>
-                        <div class="bullet future">
-                          <a href="#g5" data-position="right" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
-                        </div>
-                         <div class="bullet future">
-                          <a href="#g6" data-position="left" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
-                        </div>                 
+                    <!--  MOBILE   --> 
 
-                     </div>
-<!--                   <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
-                  </div>
-
-                  <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
-                  </div>
-                  <div class="tab col  s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped" >
-                   
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px;top: 15px;position: relative;right: 10px;"></a>
-                  </div>
-                  <div class=" col s12 l2" style="background-color: #abd3a7;  height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
-                  </div>
-                  <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped" >
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
-                  </div>
-                  <div class=" col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(7);?>' class="tooltipped">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;" ></a>
-                  </div>
-                  <div class="col s12 l2" style="background-color: #abd3a7; height: 70px; width: 70px; border-radius: 80%; margin-right: 35px;">
-                    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 45px; top: 14px; position: relative;"></a>
-                  </div> -->
-              </div>     
             </div>     
           </div>
-        
-
-
-        
 
           <div class="row first-tab hide-on-large-only">
               <li class="tab col  l2"><a class="active" href="#g0">hdh</a></li>
@@ -383,7 +370,7 @@
          <!-- base -->
           <?php
                  $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 1,);
+                   'post_type' => 'commande_en_lignes', 'cat' => 12,);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
@@ -413,7 +400,7 @@
       <!-- proteine -->
          <?php
                  $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 4,);
+                   'post_type' => 'commande_en_lignes', 'cat' => 1,);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
@@ -428,7 +415,7 @@
       <!-- grainesetnoix -->
          <?php
                  $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 5,);
+                   'post_type' => 'commande_en_lignes', 'cat' => 8,);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
@@ -443,7 +430,7 @@
       <!-- plus -->
          <?php
                  $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 6,);
+                   'post_type' => 'commande_en_lignes', 'cat' => 9,);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
@@ -458,7 +445,7 @@
        <!-- boissons-smoothies -->
         <?php
                  $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 7,);
+                   'post_type' => 'commande_en_lignes', 'cat' => 10,);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
@@ -473,7 +460,7 @@
       <!-- dessert -->
       <?php
                  $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 8,);
+                   'post_type' => 'commande_en_lignes', 'cat' => 11,);
                   $category = new WP_Query($args);
                   while (  $category -> have_posts() ) : $category -> the_post(); ?>  
 
@@ -494,17 +481,17 @@
     <div class="first-tab2" style="position: relative; border: 2px solid white; top: 292px;">
       <div id="g0" class="col s12">
          <?php
-   // <!-- debut loop base -->
+               // <!-- debut loop base -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 1,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 12,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                          <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -537,11 +524,11 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -571,15 +558,15 @@
          <!-- debut loop proteine -->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 4,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 1,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -609,15 +596,15 @@
           <!-- debut loop grainesetnoix-->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 5,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 8,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -648,15 +635,15 @@
            <!-- debut loop les plus -->
            <?php
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 6,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 9,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -688,15 +675,15 @@
 
    // <!-- debut loop a. et boissons-smoothies-->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 7,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 10,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -728,15 +715,15 @@
 
    // <!-- debut loop Dessert -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 8,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 11,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
-                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>">
+                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                                          <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
+                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> 
+                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
@@ -763,11 +750,9 @@
     </div>  
   </div>
 
-</form>  
+</form>          
 
-    <style> 
-      
-      
+      <style> 
       .cadre-ingredient{
         background-color: red; height: 96px; width: 197px; margin-right: auto;
                               margin-left: auto;margin-top: 55px; border-bottom: 2px solid black;
@@ -789,7 +774,6 @@
     -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
 }
-
       
       .pindicator {
   display: flex;
@@ -821,7 +805,6 @@
   opacity: 0;
   width: 100%;
 }
-
 .pindicator .bullet:first-child::before,
 .pindicator .bullet:first-child::after {
   left: 50%;
@@ -831,7 +814,6 @@
 .pindicator .bullet:last-child::after {
   width: 50%;
 }
-
 .pindicator .icon {
   background-color: lightgray;
   border-radius: 100%;
@@ -857,18 +839,15 @@
   background-color: #abd3a6;
   color: white;
 }
-
 .pindicator .past::after,  
 .pindicator .current::after {
   opacity: 1;
 }
-
 .pindicator .past .text,
 .pindicator .current .text,
 .pindicator .next .text,{
   color: #abd3a6;
 }
-
 .switch label input[type=checkbox]:checked+.lever:after {
     background-color: #abd3a6!important;
 }  
@@ -887,14 +866,12 @@
   height: 100%;
 }
  
-
       
  @media screen and (max-width: 600px) {
   .modale{
     width: 100%!important;
 }
 }       
-
 .button-collapse{
       margin-left: auto;
     margin-right: auto;
@@ -904,32 +881,25 @@
     top: 246px;
     z-index: 99;
 }
-
 .side-nav .user-view .circle, .side-nav .userView .circle {
     height: 150px;
     width: 150px;
 }
-
 .globale-title1{
   position: relative;
   top: 135px;
 }
-
-
 .picker--opened .picker__holder{
       background: rgba(0, 0, 0, 0);
 }
-
 .picker__holder {
     width: 100%;
     overflow-y: visible;
     }
-
     .picker__wrap {
     position: relative;
     bottom: -90px;
 }    
-
       @media screen and (max-width: 706px) {
   .pindicator .bullet::after {
     background-color: #abd3a6;
@@ -940,7 +910,6 @@
 }
 }
       
-
       @media screen and (max-width: 992px) {
   .global-tab{
     position: relative!important;
@@ -963,14 +932,15 @@
         
   .globale-snipped-price {
     top: 690px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+        width: 53%!important;
 }
   
-
 .global-tab-mobile {
       position: relative;
     bottom: 222px;
 }
-
 .tabs{
   height: 300px!important;
   top: -90px!important;
@@ -978,36 +948,29 @@
 }
         
         
-
 .dropdown {
   margin-right: auto;
   transform: translate(-50%); left: 50%; position: absolute;
   z-index: 999;
 }
-
 .dd-menu {
   z-index: 999!important;
 }
-
 .first-tab{
   display: none!important;
 }
 .first-tab2{
   position: relative!important;
     top:559px!important;
-
 }
 .form-input{
   width: 100%!important;
 }
-
 #dropdown-button{
   position: relative!important;
   top: 0px!important;
 }
-
 }
-
 input[type=email]:not(.browser-default) {
     border-bottom: 1px solid #9e9e9e!important;
 }
@@ -1015,31 +978,26 @@ input[type=email]:not(.browser-default) {
 .modalDialog {
     background: rgba(0, 0, 0, 0)!important;
 }
-
 .input-field label {
     color: #000000;
 }
-
 .tabs {
     background-color: rgba(255, 255, 255, 0);
 }
-
-
 .side-nav {
   background-color:#73a1a9;
 }
-
 .modalDialog > div {
     background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.35) 25%, rgba(255, 255, 255, 0.35) 63%)!important;
     background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.35) 25%, rgba(255, 255, 255, 0.35) 63%)!important;
     background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.35) 25%, rgba(255, 255, 255, 0.35) 63%)!important;
     background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.35) 25%, rgba(255, 255, 255, 0.35) 63%)!important;
 }
-
 @media screen and (max-width: 992px) {
   .global-tab2{
   width: 250px!important;
   padding-left: 35px!important;
+  top: 190px!important;
 }
   
   .pindicator{
@@ -1051,17 +1009,21 @@ input[type=email]:not(.browser-default) {
     position: relative!important;
     top: 550px!important;
 }
+  
+  .dropdown-content select-dropdown{
+        top: 59px!important;
+  }
  
 .tab{
 height: 600px!important;
 }                                                       
                                                         
-
 #tab2{
-height: 496px!important;
+    height: 585px!important;
+    top: 66px!important;
+    padding-top: 133px!important;
 }
 }
-
 @media screen and (max-width: 400px) {
   h4 {
     font-size: 1.8em!important;
@@ -1069,9 +1031,7 @@ height: 496px!important;
   .reservation{
     width: 121px!important;
   }
-
 }
-
 .globale-title1{
    position: relative;
    top:  198px;
@@ -1114,19 +1074,17 @@ get_template_part( 'footer-for-page' );?>
          $(document).ready(function() {
            $('select').material_select();
          });
-
 </script>
 
 <script>
   $(document).ready(function(){
     $('#modal11').modal();
     $('#modal10').modal();
+    $('#modal12').modal();
   });
-  
   console.clear();
 (function() {
   "use strict";
-
   var bulletClasses = {
     elements: {
       container: ".pindicator",
@@ -1142,7 +1100,6 @@ get_template_part( 'footer-for-page' );?>
   
   var bulletEls;
   document.addEventListener("DOMContentLoaded", initBullets);
-
   function initBullets() {
     bulletEls = Array.prototype.slice.call(
       document.body.querySelectorAll(bulletClasses.elements.bullet)
@@ -1157,7 +1114,6 @@ get_template_part( 'footer-for-page' );?>
       });
     });
   }
-
   function gotoPage(pageNum) {
     bulletEls.forEach(function(e) {
       e.classList.remove.apply(e.classList,

@@ -55,58 +55,12 @@
                   
                     <!-- Card loop -->       
                               <div style="height: 12px; width: 100%;">
-                               
-                                  <?php $args = array('post_per_page' => -1,
-                                   'post_type' => 'instagram',);
-                                  $query = new WP_Query($args); 
-                                  while (  $query -> have_posts() ) : $query -> the_post(); ?>
-                                  
-                                <div id='instafeed' style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
-                                    
-                                  
-<!--                                   <figure class="snip1571">
-                                    <?php the_post_thumbnail('small-thumbnails');?>
-                                    <figcaption>
-                                      <h3><?php the_title();?></h3>
-                                    </figcaption>
-                                    <a href="https://www.instagram.com/solunchdijon/"></a>
-                                  </figure> -->
-                                  
-                                      <!-- <figure class="snip1313">
-                                      <img class="materialboxed"  src="<?php the_post_thumbnail('small-thumbnails');?>" style="width: 100%;"> 
-                                       <div class="image"><img style="height: 100%; src="<?php the_post_thumbnail('small-thumbnails');?>"></div><span class="read-more" >
-                                       <?php the_title();?> <i class="ion-android-arrow-forward"></i></span><a href="https://www.instagram.com/solunchdijon/" target="_blank"></a>
-                                      </figure> -->
 
-<!--                                       <a  href="https://www.instagram.com/solunchdijon/"><span style="     position: absolute;
-    color: white;
-    float: right;
-    bottom: 17px;" class=""><?php the_title();?></span><img style="margin-top: 40px; margin-top: 40px;
-    height: 155px;" alt="<?php the_title();?>"  width="210" <?php the_post_thumbnail('small-thumbnails');?></a> -->
-                                  
-                                  
-                                  
-                                  
-                                      
-                                  <?php endwhile;?>
-                                
+                                <div id='instafeed' style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
+
                               </div>  
                   </div>    
 </footer> 
-
-
-<!-- 
-        <div class="row #00b0ff light-blue accent-3">
-          <div class="col s12 m12 l4 #ff5252 red accent-2">
-             gfn
-          </div>
-          <div class="col s12 m12 l4 #5c6bc0 indigo lighten-1">
-             <h6> ©  Copyright all rights reserveds - Mention Légales</h6>
-          </div>
-          <div class="col s12 m12 l4 #b2dfdb teal lighten-4">
-             g
-          </div>
-        </div>  -->
 
 
 <style>

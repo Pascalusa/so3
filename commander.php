@@ -11,14 +11,13 @@
 
        <!-- Modal Structure -->
           
-      <div class="cadre-commander" style="     background-color: white;
+      <div class="cadre-commander" style="       background-color: white;
     width: 300px;
-    height: 75px;
     border-radius: 8px;
-    height:  282px;
-    float: right;
-    top: 64px;
-    position: relative;">  
+    height: 282px;
+    right: 0;
+    top: 63px;
+    position: absolute;">  
       
          <h5 style="text-align: center; font-weight: 900; font-size: 0.9em; font-family: 'Muli', sans-serif; margin-bottom: 17px;">Commandez votre Lunch Bowl !</h5>
          <li class="divider" style="height: 2px;
@@ -281,7 +280,8 @@
 
 
   <style>
-
+    
+    
      .stripe-button-el{
       margin-left: auto; 
       margin-right: auto;
@@ -433,6 +433,7 @@ a:hover {
   right: 0;
   bottom: 0;
   left: 0;
+/*     z-index: 0!important;  */
   background: rgba(0,0,0,0.8);
   z-index: 99999;
   opacity:0;
@@ -512,6 +513,14 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.35);
 }
+    
+    @media screen and (max-width: 400px) {
+  .cadre-commander{
+    top: 150px!important;
+     transform: translate(-50%)!important; left: 50%!important;
+    width : 274px!important;;
+  }
+}
 
 @media screen and (max-width: 1633px) {
   .modalDialog > div, .modal-livaison > div {
@@ -557,19 +566,11 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
   .restriction1{
     display: none!important;
   }
-
-  .cadre-commander{
-    position: relative!important;
-    top: 100px!important;
+  .modalDialog {
+    background-color:#ffb74d!important;
   }
 
-  
-
 }
-/*@media screen and (min-width: 732px) {
-  .img_livraison{
-    height: 402px!important;   
-}*/
 
 
 #test1, #test2, #test3, #test4, #test5, #test6{
@@ -591,7 +592,6 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
 }
 
 .tabs{
- height: 282px!important;
     top: 290px!important;
     z-index: 10!important;
     /*width: 200px;*/
