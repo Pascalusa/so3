@@ -255,55 +255,42 @@
     position: absolute!important;
     width: 100%;
     ">
+           
+        <!--   TAB computer    -->
+        
+         <div class="pindicator">
+  <div class="bullet past">
+    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(12);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
+     <!--     base     -->
+  </div>
+  <div class="bullet current">
+    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
+  </div>
+  <div class="bullet next future">
+    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
+  </div>
+  <div class="bullet future">
+    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
+  </div>
+  <div class="bullet future">
+   <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(9);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
+  </div>
+  <div class="bullet future">
+    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(10);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
+  </div>
+   <div class="bullet future">
+    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(11);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
+  </div>                 
+                    
+</div>
 
         <div class="row " style="width: 100%; height: 400px!important;">
               <div class=" col s12 m12 l10" style="transform: translate(-50%)!important; left: 50%!important; position: absolute!important;">
                 <div class="global-tab2" style="transform: translate(-50%)!important;
-    left: 50%!important;
-    position: absolute!important;
-    width: 787px;
-    padding-left: 45px;">
-                  
-                <div class="z-depth-3 hide-on-large-only" style=" background-color:#abd3a6;
-    width: 185px;
-    height: 259px;
-    bottom:15px;
-    padding-top: 26px;
-    padding-left: 45px; border-radius:20px;">
-                  <ul>
-                    <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g0"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(12);?></a></li>
-                                        <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g1"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(3);?></a></li>
-                                        <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g2"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(1);?></a></li>
-                                        <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g3"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(8);?></a></li>
-                                        <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g4"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(9);?></a></li>
-                                        <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g5"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(10);?></a></li>
-                                        <li style="    margin-bottom: 5px;
-    font-size: 1.2em;
-    font-weight: 700;"><a href="#g6"><i class=" material-icons" style="font-size: 10px!important;
-                        margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(11);?></a></li>
-                  </ul>
-                <div>  
-                  
-                  
-
+                                              left: 50%!important;
+                                              position: absolute!important;
+                                              width: 787px;
+                                              padding-left: 45px;">
                   <?php 
                   $bases = get_cat_name(12);
                   $veggies = get_cat_name(3);
@@ -312,35 +299,50 @@
                   $plus = get_cat_name(9);
                   $assortiments = get_cat_name(10);
                   $dessert = get_cat_name(11);
-                  ?>   
+                  ?> 
                   
-               <div class="hide-on-med-and-down">
-                  <div class="pindicator hide-on-med-and-down">
-                        <div class="bullet past">
-                          <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo $bases;?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
-                           <!--     base     -->
-                        </div>
-                        <div class="bullet current">
-                          <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo $veggies;?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
-                        </div>
-                        <div class="bullet next future">
-                          <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo $proteines;?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
-                        </div>
-                        <div class="bullet future">
-                          <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo $graine;?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
-                        </div>
-                        <div class="bullet future">
-                         <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo $plus;?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
-                        </div>
-                        <div class="bullet future">
-                          <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo $assortiments;?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
-                        </div>
-                         <div class="bullet future">
-                          <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo $dessert;?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
-                        </div>                       
-                  </div>
-              </div>    
-                    <!--  MOBILE   --> 
+                  
+                  <!--  MOBILE tab  --> 
+                <div class="z-depth-3 hide-on-large-only" style=" background-color:#abd3a6;
+                          width: 185px;
+                          height: 259px;
+                          bottom:15px;
+                          padding-top: 26px; border-radius:20px;">
+                  <ul>
+                      <!--       LOGO TAB MOBILE               -->
+                    <li style="    background-color: #ffffff; height: 50px;width: 50px; position: absolute;right: -99px;margin-right: 150px;
+                       top: -26px;z-index: 9;border-radius: 50%;"> <a href="<?php bloginfo('url'); ?>"><img style="width: 107%!important;
+                          position: relative; right: 1px; bottom: 4px;" src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" class="logo"></a></li>
+                                        <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g0"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(12);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g1"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(3);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g2"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(1);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g3"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(8);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g4"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(9);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g5"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(10);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g6"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(11);?></a></li>
+                  </ul>
+                <div>    
 
             </div>     
           </div>
@@ -377,7 +379,7 @@
                         <div id="<?php the_title();?>" style="display: none; background-color: #fbe9e7;" class="chip" >
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span > 
                         </div> 
 
            <?php endwhile;?> 
@@ -392,7 +394,7 @@
                         <div  id="veggies-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span >  
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span >  
                         </div> 
 
            <?php endwhile;?> 
@@ -407,7 +409,7 @@
                         <div  id="proteine-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span > 
                         </div> 
 
            <?php endwhile;?> 
@@ -422,7 +424,7 @@
                         <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                            <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span> 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span> 
                         </div> 
 
            <?php endwhile;?>
@@ -437,7 +439,7 @@
                         <div  id="plus-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                            <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</span > 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span > 
                         </div> 
 
            <?php endwhile;?>
@@ -452,7 +454,7 @@
                         <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span style="font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</h5>  
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </h5>  
                         </div> 
 
            <?php endwhile;?>
@@ -467,7 +469,7 @@
                         <div  id="dessert-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                            <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</h5>   
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </h5>   
                         </div> 
 
            <?php endwhile;?>
@@ -490,7 +492,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -527,7 +529,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -565,7 +567,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -603,7 +605,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -642,7 +644,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>> 
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -682,7 +684,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -722,7 +724,7 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                           height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
@@ -915,6 +917,9 @@
     position: relative!important;
     margin-top: 45px!important;
 }
+        .pindicator{
+          display: none!important;
+        }
         #diet{
               position: absolute!important;
     transform: translate(-50%)!important;
@@ -999,11 +1004,7 @@ input[type=email]:not(.browser-default) {
   padding-left: 35px!important;
   top: 190px!important;
 }
-  
-  .pindicator{
-    display:block!important;
-    width: 137px!important;
-  }
+ 
   
 .first-tab2 {
     position: relative!important;
@@ -1027,6 +1028,11 @@ height: 600px!important;
 @media screen and (max-width: 400px) {
   h4 {
     font-size: 1.8em!important;
+  }
+  
+  .circle-cat{
+    height: 77px!important;
+    width: 77px!important;
   }
   .reservation{
     width: 121px!important;
