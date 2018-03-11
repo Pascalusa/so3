@@ -27,7 +27,8 @@
     margin-right: auto;
     background-color: #000000;"></li>
          <p style="font-size: 0.91em; width: 225px; margin-right: auto; margin-left: auto; font-family: 'Josefin Sans', sans-serif; margin-bottom: -7px;">Composez votre propre bowl en associant les ingrédients de votre choix. 1 base, 3 ingrédients dont 1 protéine ou fromage, et 1 sauce pour commencer, puis ajoutez-y tout ce que vous souhaitez!
-         <br><br><div class="center-align">À partir de 9.90€</div></p>
+         <br><br><div class="center-align">À partir de 9.90€</div></p> 
+
 
          <div class="row" style="margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;  width: 80%;">
              <div class="col m6 l6">
@@ -38,7 +39,7 @@
              </h5>    
           </div>  
       </div>
-        
+
       <!-- Debut modale 1l -->
  
 
@@ -567,7 +568,7 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
     display: none!important;
   }
   .modalDialog {
-    background-color:#ffb74d!important;
+    background-color:#3c3c3b!important;
   }
 
 }
@@ -621,6 +622,12 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+      <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-autopop="false" id="snipcart" data-api-key="MWU3YTcyY2QtOGJmZi00YWFkLTk4ZmItNGJiMTdkNTFkY2IyNjM2NTYwNTQ2ODAxODkyNDMw">
+   
+  </script>
 
         <script type="text/javascript">
         $(document).ready(function(){

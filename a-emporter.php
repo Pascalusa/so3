@@ -101,6 +101,8 @@
                        <a class="modal-action modal-close" style="position: relative; float: right; bottom: 204px;
                     padding-right: 20px;"><span style="font-size: 1.5em; color:#000;">X</span></a>
             </div>
+            
+            
                       
           </div>
 
@@ -235,6 +237,16 @@
 
                     <a data-position="top" data-delay="50" data-tooltip='Indiquez vos restrictions alimentaires'  class="waves-effect modal-trigger tooltipped" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 29;
                       border: 2px solid white; color: #fff;">DIET</a>
+                      
+                      <div class="snipcart-summary">
+    Number of items: <span class="snipcart-total-items"></span>
+    Total price: <span class="snipcart-total-price"></span>
+</div>
+                      
+                      <a href="#" class="snipcart-checkout">Click here to checkout</a>
+                      
+                      
+                      
 
                     <!-- restriction transform: translate(-50%); position: absolute; left: 50%;-->
                     <!-- <a style="background-color: rgba(171, 211, 166, 0); z-index: 999;  margin-right: auto; margin-left: auto; display: block; border: 2px solid;" class='dropdown-button restriction btn' href='#' data-activates='dropdown1'><span style=" margin-right: 45px;">Diet<span><i style="font-size: 1.9rem!important; position: absolute; bottom: -3px; right: 7px;" class="large material-icons">arrow_drop_down</i> --><!-- <i class="large material-icons" style="    font-size: 2.4rem!important;">visibility_off</i> --><!-- </a> -->
@@ -303,15 +315,13 @@
                   
                   
                   <!--  MOBILE tab  --> 
-                <div class="z-depth-3 hide-on-large-only" style=" background-color:#abd3a6;
-                          width: 185px;
-                          height: 259px;
-                          bottom:15px;
-                          padding-top: 26px; border-radius:20px;">
+                <div class="z-depth-3 hide-on-large-only" style="background-color: #abd3a6; width: 232px; height: 259px; padding-top: 26px; border-radius: 20px;
+                                            border: 2px solid white; transform: translate(-50%); left: 50%; position: absolute;">
                   <ul>
                       <!--       LOGO TAB MOBILE               -->
-                    <li style="    background-color: #ffffff; height: 50px;width: 50px; position: absolute;right: -99px;margin-right: 150px;
-                       top: -26px;z-index: 9;border-radius: 50%;"> <a href="<?php bloginfo('url'); ?>"><img style="width: 107%!important;
+                    <li style="background-color: #ffffff; height: 50px;width: 50px; position: absolute; margin-right: 150px; top: -26px; z-index: 9; border-radius: 50%;
+                          transform: translate(-50%);left: 50%;"> 
+                      <a href="<?php bloginfo('url'); ?>"><img style="width: 107%!important;
                           position: relative; right: 1px; bottom: 4px;" src="<?php bloginfo('stylesheet_directory'); ?>/img/SO-LUNCH-EMBLEME-01.png" class="logo"></a></li>
                                         <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
@@ -365,7 +375,8 @@
           <li onclick="toggleByClass('poisson')" class="collection-item">Poisson</li>
           <li onclick="toggleByClass('viande')" class="collection-item">Viande</li>
       </ul> -->
-      
+                
+     
  
      <!--    Snipped de prix      -->
      <div class="globale-snipped-price" style=" top: 420px;position: relative;"> 
@@ -379,11 +390,11 @@
                         <div id="<?php the_title();?>" style="display: none; background-color: #fbe9e7;" class="chip" >
                           <?php the_post_thumbnail('medium-thumbnails'); ?>
                           <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span > 
+                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php get_template_part( 'base10');?> </span > 
                         </div> 
 
            <?php endwhile;?> 
-      
+                   <?php get_template_part( 'base10');?>
          <!-- veggies -->
           <?php
                  $args = array('post_per_page' => -1,
@@ -473,12 +484,8 @@
                         </div> 
 
            <?php endwhile;?>
-      
       </div>
-      
-       
-
-
+                
     </div>
     <div class="first-tab2" style="position: relative; border: 2px solid white; top: 292px;">
       <div id="g0" class="col s12">
@@ -492,13 +499,15 @@
                           <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                      <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
                                               <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
                                                 0 €
-                                                <input class="<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
+                                                <input class="<?php the_title();?> snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-image="<?php the_post_thumbnail('medium-thumbnails'); ?>" data-item-name="<?php the_title();?>"
+    data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>"
+    data-item-weight="20" type="radio" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
                                                 <span class="lever"></span>
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
@@ -540,6 +549,7 @@
                                                 <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
                                               </label>
                                      </div>
+
                                  </div>     
                                   
                                 
@@ -755,6 +765,22 @@
 </form>          
 
       <style> 
+        
+       /*  Bouton next snipcart supprimer  */
+        div#snipcart-actions.snip-actions{
+          display:none!important;
+        }
+        
+        /* ecriture bas supprimer  */
+        .snip-layout .snip-actions__link, .snip-layout .snip-footer__highlight {
+          color: rgba(226, 226, 226, 0);
+        }
+        /* ecriture bas supprimer  */
+        .snip-layout .snip-footer__copyright{
+          color:rgba(204, 187, 187, 0);
+        }
+
+        
       .cadre-ingredient{
         background-color: red; height: 96px; width: 197px; margin-right: auto;
                               margin-left: auto;margin-top: 55px; border-bottom: 2px solid black;
@@ -1081,6 +1107,8 @@ get_template_part( 'footer-for-page' );?>
            $('select').material_select();
          });
 </script>
+      
+      
 
 <script>
   $(document).ready(function(){
