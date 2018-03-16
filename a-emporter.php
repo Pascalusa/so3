@@ -230,26 +230,18 @@
                   <div class="row" style="width: 300px;position: relative; top: 202px;z-index: 20;">
                     <div class="col s12 l6">
                       
-                    <a class="modal-trigger reservation" href="#modal10" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
+                    <a class="snipcart-checkout reservation" href="#modal10"  data-item-custom1-name="Jours (Fermé le Dimanche et jours fériés)"
+  data-item-custom1-options="<?php echo $aujourdhui ?>| <?php echo $demain ?>| <?php echo $jour2 ?>| <?php echo $jour3 ?>|<?php echo $jour4 ?>| <?php echo $jour5 ?>| <?php echo $jour6 ?>" 
+  data-item-custom2-name="Horaires"
+  data-item-custom2-options="12:30 - 12:45| 12:45 - 13:00| 13:00 - 13:15| 13:15 - 13:30 |13:30 - 13:45 |13:45 - 14:00|14:15 - 14:30|14:30 - 14:45|14:45 - 15:00|15:00 - 15:15|15:15 - 15:30|15:30 - 15:45|18:00 - 18:15|18:15 - 18:30|18:30 - 18:45|18:45 - 19:00|19:00 - 19:15" class="snipcart-add-item" data-item-id="75b" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" 
+                                               data-item-price="" data-item-name="Réservation" style="top: 150px; padding: 7px 25px; border: 2px solid; background-color: #ffffff54!important; font-weight: 800!important; margin-right: auto; margin-left: auto; display: block;">RÉSERVER</a> 
 
                     </div>
                     <div class="col s12 l6" id="diet">  
 
                     <a data-position="top" data-delay="50" data-tooltip='Indiquez vos restrictions alimentaires'  class="waves-effect modal-trigger tooltipped" href="#modal11" style="    background-color: rgba(171, 211, 166, 0); padding: 7px 42px;z-index: 29;
                       border: 2px solid white; color: #fff;">DIET</a>
-                      
-                      <div class="snipcart-summary">
-    Number of items: <span class="snipcart-total-items"></span>
-    Total price: <span class="snipcart-total-price"></span>
-</div>
-                      
-                      <a href="#" class="snipcart-checkout">Click here to checkout</a>
-                      
-                      
-                      
-
-                    <!-- restriction transform: translate(-50%); position: absolute; left: 50%;-->
-                    <!-- <a style="background-color: rgba(171, 211, 166, 0); z-index: 999;  margin-right: auto; margin-left: auto; display: block; border: 2px solid;" class='dropdown-button restriction btn' href='#' data-activates='dropdown1'><span style=" margin-right: 45px;">Diet<span><i style="font-size: 1.9rem!important; position: absolute; bottom: -3px; right: 7px;" class="large material-icons">arrow_drop_down</i> --><!-- <i class="large material-icons" style="    font-size: 2.4rem!important;">visibility_off</i> --><!-- </a> -->
+                    
                 </div>    
 
                     </div>
@@ -366,127 +358,38 @@
               <li class="tab col  l2"><a href="#g5">Test5</a></li>
               <li class="tab col l2"><a href="#g6">Test 6</a></li>
           </div>    
-      </ul>
-
-     <!--  <ul class="collection dropdown-content1" id='dropdown1'>
-          <li onclick="toggleByClass('soja')" class="collection-item">Soja</li>
-          <li onclick="toggleByClass('gluten')" class="collection-item">Gluten</li>
-          <li onclick="toggleByClass('produits-laitiers')" class="collection-item">Produit Laitiers</li>
-          <li onclick="toggleByClass('poisson')" class="collection-item">Poisson</li>
-          <li onclick="toggleByClass('viande')" class="collection-item">Viande</li>
-      </ul> -->
-                
-     
- 
-     <!--    Snipped de prix      -->
-     <div class="globale-snipped-price" style=" top: 420px;position: relative;"> 
-         <!-- base -->
-          <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 12,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div id="<?php the_title();?>" style="display: none; background-color: #fbe9e7;" class="chip" >
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> : <?php get_template_part( 'base10');?> </span > 
-                        </div> 
-
-           <?php endwhile;?> 
-                   <?php get_template_part( 'base10');?>
-         <!-- veggies -->
-          <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 3,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div  id="veggies-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span >  
-                        </div> 
-
-           <?php endwhile;?> 
-      
-      <!-- proteine -->
-         <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 1,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div  id="proteine-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span > 
-                        </div> 
-
-           <?php endwhile;?> 
-      
-      <!-- grainesetnoix -->
-         <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 8,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div  id="grainesetnoix-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span> 
-                        </div> 
-
-           <?php endwhile;?>
-      
-      <!-- plus -->
-         <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 9,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div  id="plus-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                           <span  style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </span > 
-                        </div> 
-
-           <?php endwhile;?>
-      
-       <!-- boissons-smoothies -->
-        <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 10,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div  id="boissons-smoothies-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                          <span style="font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </h5>  
-                        </div> 
-
-           <?php endwhile;?>
-      
-      <!-- dessert -->
-      <?php
-                 $args = array('post_per_page' => -1,
-                   'post_type' => 'commande_en_lignes', 'cat' => 11,);
-                  $category = new WP_Query($args);
-                  while (  $category -> have_posts() ) : $category -> the_post(); ?>  
-
-                        <div  id="dessert-<?php the_title();?>" style="display: none; background-color:  #fbe9e7;" class="chip">
-                          <?php the_post_thumbnail('medium-thumbnails'); ?>
-                           <span style=" font-family: 'Muli', sans-serif;"><span style="display:none;"><?php the_title();?></span> 
-                            <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?> </h5>   
-                        </div> 
-
-           <?php endwhile;?>
-      </div>
-                
+      </ul>           
     </div>
+          
+<!--           <div class="globaleinsncription" style=" 
+   height: 42px;
+    position: absolute;
+    width: 179px;
+    bottom: 669px;">     
+            <div style="background-color: white;
+    height: 45px;
+    position: relative;
+    top: 51px;
+    border: 4px solid #abd3a6;
+    left: 19px;
+                        
+                        border-radius: 45px;"><a class="snipcart-user-profile" style="
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 7px;"><span class="snipcart-user-email">Login</span></a></div>
+  <a class="btn-floating btn-large waves-light red" style="background-color: #abd3a6!important;"><i class="material-icons">add</i></a>
+       <a class="btn-floating btn-large waves-light red " style="background-color: #abd3a6!important; position: absolute;
+    right: -42px;"><i class="material-icons snipcart-user-email">add</i></a>   
+          </div> 
+ -->
+
+          <div class="snipcart-summary" id="totalprice" style="position: absolute; transform: translate(-50%); left: 50%; font-weight: 600; top: 265px; color: black;
+                                       border-radius: 50px; background-color: white; z-index: 9; padding: 14px;">
+  
+            Prix Total: <span class="snipcart-total-price"></span>
+         </div>
     <div class="first-tab2" style="position: relative; border: 2px solid white; top: 292px;">
       <div id="g0" class="col s12">
          <?php
@@ -496,31 +399,29 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                          <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                          <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="<?php the_title();?> snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-image="<?php the_post_thumbnail('medium-thumbnails'); ?>" data-item-name="<?php the_title();?>"
-    data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>"
-    data-item-weight="20" type="radio" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                 </div>    
-                                  <div id="<?php the_title();?>" style="display: none;"><?php the_title();?></div>
-                                     <script>
-                                            $(".<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" data-item-custom1-name="Jours (Fermé le Dimanche et jours fériés)"
+  data-item-custom1-options="<?php echo $aujourdhui ?>| <?php echo $demain ?>| <?php echo $jour2 ?>| <?php echo $jour3 ?>|<?php echo $jour4 ?>| <?php echo $jour5 ?>| <?php echo $jour6 ?>" 
+  data-item-custom2-name="Horaires"
+  data-item-custom2-options="12:30 - 12:45| 12:45 - 13:00| 13:00 - 13:15| 13:15 - 13:30 |13:30 - 13:45 |13:45 - 14:00|14:15 - 14:30|14:30 - 14:45|14:45 - 15:00|15:00 - 15:15|15:15 - 15:30|15:30 - 15:45|18:00 - 18:15|18:15 - 18:30|18:30 - 18:45|18:45 - 19:00|19:00 - 19:15" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
                           </div>   
                           <!-- fin Card --> 
                         <?php endwhile;?>  
@@ -535,31 +436,27 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                         <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="veggies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
 
-                                 </div>     
-                                  
-                                
-                                     <script>
-                                            $(".veggies-<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#veggies-<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
-                          </div>   
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
+                          </div>  
                           <!-- fin Card -->
                         <?php endwhile;?>  
                       <!-- debut loop -->  
@@ -574,29 +471,27 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                          <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="proteine-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                 </div>       
-                                  
-                                  <script>
-                                            $(".proteine-<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#proteine-<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
-                          </div>   
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
+
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
+                          </div>  
                           <!-- fin Card --> 
                         <?php endwhile;?>  
                       <!-- debut loop -->
@@ -612,29 +507,27 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                          <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="grainesetnoix-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                       
-                                       <script>
-                                            $(".grainesetnoix-<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#grainesetnoix-<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
-                                 </div>             
-                          </div>   
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
+
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
+                          </div>     
                           <!-- fin Card --> 
                         <?php endwhile;?>  
                       <!-- debut loop -->        
@@ -651,29 +544,27 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                          <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>> 
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="plus-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                 </div> 
-                                  
-                                    <script>
-                                            $(".plus-<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#plus-<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
-                          </div>   
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
+
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
+                          </div>     
                           <!-- fin Card --> 
                         <?php endwhile;?>  
                       <!-- debut loop -->
@@ -691,29 +582,27 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                              <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                          <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="boissons-smoothies-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                 </div>      
-                                  
-                                    <script>
-                                            $(".boissons-smoothies-<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#boissons-smoothies-<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
-                          </div>   
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
+
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
+                          </div>    
                           <!-- fin Card --> 
                         <?php endwhile;?>  
                       <!-- debut loop -->
@@ -731,29 +620,27 @@
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
-                          <div class="col s12 m4 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
+                         <div class="col s12 m6 l2 <?php echo restriction_get_meta( 'restriction_soja' );?> <?php echo restriction_get_meta( 'restriction_gluten' );?> <?php echo restriction_get_meta( 'restriction_produits_laitiers' );?>
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:;padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
-                                <div style="background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
-                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="    border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                          height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?> >
+                                <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
+                                     <div data-position="top" data-delay="50" data-tooltip='<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
-                                     <div class="switch" style="width: 140px; margin-right: auto; margin-left: auto; margin-top: 17px; margin-left: 4px;">
-                                              <label style="font-family: 'Josefin Sans', sans-serif; color: white;">
-                                                0 €
-                                                <input class="dessert-<?php the_title();?>" type="checkbox" name="menu[]" value="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_title' ); ?>">
-                                                <span class="lever"></span>
-                                                <?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€
-                                              </label>
-                                     </div>
-                                       
-                                       <script>
-                                            $(".dessert-<?php the_title();?>").click(function() {
-                                            $(this).toggleClass("on");
-                                            $("#dessert-<?php the_title();?>").slideToggle();
-                                          });
-                                    </script>
-                                 </div>             
-                          </div>   
+                                 </div>                                   
+                                      <div class="row" style="height:45px; position: relative; top: 12px;">
+                                            <div style="background-color:#ffffff; width: 45px; margin-right: auto; padding: 1px; border-radius: 29px; margin-left: auto; border: 2px solid white; position: relative; top: 16px;"><p style=" font-weight: 600; text-align: center; position: relative; bottom: 5px;"><?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>€</p></div>
+
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; background-color: #abd3a6; border-radius: 14px; ">
+                                            <a href="" class="snipcart-add-item" data-item-id="<?php the_ID();?>" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-description="<?php the_excerpt(); ?>" 
+                                               data-item-price="<?php echo prix_pour_la_page_reservation_et_livraison_get_meta( 'prix_pour_la_page_reservation_et_livraison_prix_2_normal_' ); ?>" data-item-name="<?php the_title();?>" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px; margin-right: -6px;">favorite</i></a>
+                                        </div> 
+                                        <div class="col s6 m6 l6 " style="border: 2px solid white; border-radius: 14px; ">
+                                            <a href="#" class="snipcart-checkout" style="margin-right: auto; margin-left: auto; display: block;">
+                                              <i class="large material-icons" style="font-size: 2rem!important; padding: 6px;">clear</i> </a>
+                                        </div>
+                                      </div>
+                          </div>    
                           <!-- fin Card --> 
                         <?php endwhile;?>  
                       <!-- debut loop -->
@@ -766,20 +653,27 @@
 
       <style> 
         
-       /*  Bouton next snipcart supprimer  */
-        div#snipcart-actions.snip-actions{
-          display:none!important;
-        }
-        
+      
         /* ecriture bas supprimer  */
         .snip-layout .snip-actions__link, .snip-layout .snip-footer__highlight {
           color: rgba(226, 226, 226, 0);
-        }
+        } 
         /* ecriture bas supprimer  */
         .snip-layout .snip-footer__copyright{
           color:rgba(204, 187, 187, 0);
+        } 
+        
+       input#snip-number, #snip-cvc, #snip-ownerName, #snip-type, #snip-expirationMonth, #snip-expirationYear {
+          visibility: hidden;
         }
-
+        
+         .snip-form__container.snip-form__container-input {
+          visibility: hidden;
+        } 
+        
+        .snip-col{
+          display:none;
+        }
         
       .cadre-ingredient{
         background-color: red; height: 96px; width: 197px; margin-right: auto;
@@ -939,6 +833,17 @@
 }
       
       @media screen and (max-width: 992px) {
+        
+        .globaleinsncription{
+          top: -216px!important;
+        }
+        
+        #totalprice{
+              position: relative!important;
+              top: 587px!important;
+          text-align: center!important;
+              width: 125px;
+        }
   .global-tab{
     position: relative!important;
     margin-top: 45px!important;
@@ -1076,7 +981,7 @@ get_template_part( 'footer-for-page' );?>
 
      <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
+     <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 <script>

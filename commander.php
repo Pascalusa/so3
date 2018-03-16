@@ -626,8 +626,7 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
       <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-autopop="false" id="snipcart" data-api-key="MWU3YTcyY2QtOGJmZi00YWFkLTk4ZmItNGJiMTdkNTFkY2IyNjM2NTYwNTQ2ODAxODkyNDMw">
-   
-  </script>
+      </script>
 
         <script type="text/javascript">
         $(document).ready(function(){
