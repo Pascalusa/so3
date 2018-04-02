@@ -60,16 +60,72 @@
 
     <div id="openModal-livraison" class="modal-livaison">
       <div class="z-depth-5">
-        <a href="#close" title="Close" class="close">X</a>
+        <a href="#openModal" title="Close" class="close">X</a>
 
-
+<a href="http://materializecss.com/icons.html" > sex</a>
           
-             <h4 class="" style=" margin-top: 85px; font-family: 'Muli', sans-serif!important; transform: translate(-50%); left: 50%;  position: absolute;top: 77px; border-bottom: 2px solid;
-                border-top: 2px solid; font-family: 'Muli', sans-serif;">Livraison<img src="<?php bloginfo('stylesheet_directory'); ?>/img/solunch-food.png" style="width: 70px;
-                  position: absolute;
-                  bottom: 38px;
-                  transform: translate(-50%); left: 50%;"> 
+             <h4 class="" style=" margin-top: 85px; font-family: 'Muli', sans-serif!important; transform: translate(-50%); left: 50%;  position: absolute;top: 77px; 
+                border-top: 2px solid; font-family: 'Muli', sans-serif;">Composez votre Lunch Bowl 
              </h4>
+        
+              <div class="snipcart-summary" id="totalprice" style="position: absolute; transform: translate(-50%); left: 50%; font-weight: 600; top: 265px; color: black;
+                                       border-radius: 50px; background-color: white; z-index: 9; padding: 14px;">
+  
+                
+                Nombre d'ingrédient(s): <span class="snipcart-total-items"></span>
+             </div>
+        
+        <p style="text-align: center; position: relative; top: 310px;">* Choisissez 1 ingrédient parmis les 3 catégories</p>
+        
+           
+                  <div class="input-field col s12" style="position: relative; top: 356px; z-index:999; width: 231px; margin-left: auto;
+                     margin-right: auto; ">
+                      <select>
+                        <option value="" disabled selected>- <?php  echo get_cat_name(12);?> -</option>
+                         <?php
+                                         $args = array('post_per_page' => -1,
+                                           'post_type' => 'commande_en_lignes', 'cat' => 12,);
+                                          $category = new WP_Query($args);
+                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
+                                       <option style="border-bottom:#000;"><a href="http://materializecss.com/icons.html" ><?php the_title();?></option></a>
+                        <?php endwhile;?> 
+                        <option value="" disabled>- <?php  echo get_cat_name(3);?> - </option>
+                         <?php
+                                         $args = array('post_per_page' => -1,
+                                           'post_type' => 'commande_en_lignes', 'cat' => 3,);
+                                          $category = new WP_Query($args);
+                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
+                                       <option style="border-bottom:#000;"><?php the_title();?></option>
+                        <?php endwhile;?> 
+                        <option value="" disabled>- <?php  echo get_cat_name(1);?> - </option>
+                         <?php
+                                         $args = array('post_per_page' => -1,
+                                           'post_type' => 'commande_en_lignes', 'cat' => 1,);
+                                          $category = new WP_Query($args);
+                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
+                                       <option style="border-bottom:#000;"><?php the_title();?></option>
+                        <?php endwhile;?> 
+                      </select>
+                      <label></label>
+                   </div>
+                   
+                   <div>
+                        </form>
+                           <input type="submit" name="submit" value="Submit" >
+                        </form>
+                         <?php
+                                         $args = array('post_per_page' => -1,
+                                           'post_type' => 'commande_en_lignes', 'cat' => 12,);
+                                          $category = new WP_Query($args);
+                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
+
+                          <div data-position="top" id="sick" style="display: none;" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>
+                          </div> 
+                      
+                        <?php endwhile;?>
+                   </div>
+
              
 
 
@@ -127,45 +183,7 @@
 
 <div>
 
-  <div class="globale-check hide-on-med-and-down" style="width: 86%; height: 45px;transform: translate(-50%)!important; left: 50%!important; position: absolute!important;     margin-top: 65px;">
-            <div style="  margin-left: auto; margin-right: auto; width: 552px; height: 45px;">
-                <div class="check_circle" style="background-color: #abd3a7; width: 70px; height: 70px; border-radius: 50%; float: left;    margin-right: 22px;">
-                  <a href="#test1" data-position="top" data-delay="10" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped" style="margin-left: auto; margin-right: auto; display: block; z-index: 899;">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 40px; margin-left: auto; margin-right: auto; display:block;position: relative; top: 17px;">
-                  </a>
-                </div>  
-
-                <div class="check_circle" style="background-color: #abd3a7; width: 70px; height: 70px; border-radius: 50%; float: left;     margin-right: 22px;">
-                  <a href="#test2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(2);?>' class="tooltipped" style="margin-left: auto; margin-right: auto; display: block;">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 40px; margin-left: auto; margin-right: auto; display:block;position: relative; top: 17px;">
-                  </a>
-                </div>
-
-                <div class="check_circle" style="background-color: #abd3a7; width: 70px; height: 70px; border-radius: 50%; float: left;     margin-right: 22px;">
-                  <a href="#test3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"  style="margin-left: auto; margin-right: auto; display: block;">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 40px; margin-left: auto; margin-right: auto; display:block;position: relative; top: 17px;">
-                  </a>
-                </div>
-
-                <div class="check_circle" style="background-color: #abd3a7; width: 70px; height: 70px; border-radius: 50%; float: left;     margin-right: 22px;">
-                  <a href="#test4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(4);?>' class="tooltipped"  style="margin-left: auto; margin-right: auto; display: block;">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 40px; margin-left: auto; margin-right: auto; display:block;position: relative; top: 17px;">
-                  </a>
-                </div>
-
-                <div class="check_circle" class="check_circle" style="background-color: #abd3a7; width: 70px; height: 70px; border-radius: 50%; float: left;     margin-right: 22px;">
-                  <a href="#test5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(5);?>' class="tooltipped"  style="margin-left: auto; margin-right: auto; display: block;">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 40px; margin-left: auto; margin-right: auto; display:block;position: relative; top: 17px;">
-                  </a>
-                </div>
-
-                <div  class="check_circle"  style="background-color: #abd3a7; width: 70px; height: 70px; border-radius: 50%; float: left;     margin-right: 22px;">
-                  <a href="#test6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(6);?>' class="tooltipped"  style="margin-left: auto; margin-right: auto; display: block;">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/check.png" style="width: 40px; margin-left: auto; margin-right: auto; display:block;position: relative; top: 17px;">
-                  </a>
-                </div>
-            </div>    
-  </div>
+ 
                     <div style="transform: translate(-50%); left: 50%; position: absolute; width: 912px; display: none;">
 
                       <div> 
@@ -204,65 +222,6 @@
 
 
   
-                <!-- tab1 -->
-               
-
-                    <div id="test1" class="col s12">    
-                          <div class="row">
-
-                       <!-- debut loop -->
-                     <?php get_template_part( 'groupe/les-veggies');?>
-                      <!-- debut loop -->
-
-                          </div> <!-- fin row -->
-                    </div>
-
-                    <div id="test2" class="col s12">
-                          <div class="row">
-                             
-                            <!-- debut loop -->
-                            <?php get_template_part( 'groupe/les-proteines');?> 
-                            <!-- debut loop -->
-
-                          </div> <!-- fin row --> 
-                    </div>
-                    <div id="test3" class="col s12">
-                          <div class="row">
-                                              <!-- debut loop -->
-                                  <?php get_template_part( 'groupe/graine-et-noix');?>
-                                        <!-- debut loop -->
-
-                          </div> <!-- fin row -->
-                    </div>
-                    <div id="test4" class="col s12">
-
-                          <div class="row">
-
-                              <!-- debut loop -->
-                            <?php get_template_part( 'groupe/les-plus');?>
-                                  <!-- debut loop -->
-                          </div> <!-- fin row -->
-                    </div>
-                    <div id="test5" class="col s12">
-
-                     <div class="row">
-
-                        <!-- debut loop -->
-                      <?php get_template_part( 'groupe/assaisonnements-boissons&smoothies');?>
-                            <!-- debut loop -->
-                    </div> <!-- fin row -->
-                      
-
-                    </div>
-                    <div id="test6" class="col s12">
-
-                     <div class="row">
-
-                        <!-- debut loop -->
-                      <?php get_template_part( 'groupe/desserts');?>
-                            <!-- debut loop -->
-                    </div> <!-- fin row -->
-
         
 
                     </div>
@@ -281,18 +240,15 @@
 
 
   <style>
-    
-    
-     .stripe-button-el{
-      margin-left: auto; 
-      margin-right: auto;
-      display: block;
-      position: relative; 
-      top: 250px;
-      z-index: 777;
-      background-color: rgba(255, 255, 255, 0.47)!important;
-    }  
-
+/*     
+    .dropdown-content li>a, .dropdown-content li>span{
+          border-bottom: 2px solid #abd3a7;
+      color:#000000;
+      text-align: center;
+    }
+    .select-wrapper{
+      width: 225px;
+    } */
 
 a {
   text-decoration: none;
@@ -504,7 +460,7 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
 }
 
 .modal-livaison > div {
- width: 90%;
+  width: 90%;
   position: relative;
   bottom: 190px;
   overflow: auto;
@@ -627,7 +583,12 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
 
       <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-autopop="false" id="snipcart" data-api-key="MWU3YTcyY2QtOGJmZi00YWFkLTk4ZmItNGJiMTdkNTFkY2IyNjM2NTYwNTQ2ODAxODkyNDMw">
       </script>
-
+ 
+      <script> 
+        $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+     </script>
         <script type="text/javascript">
         $(document).ready(function(){
             $('.dropdown-button').dropdown('close');
@@ -672,6 +633,11 @@ function toggleByClass(className) {
      $("."+className).toggle();
 }
 </script>
+ <script>         
+function toggleByClass(className) {
+     $("."+className).toggle();
+}
+</script> 
 
 <script>
 
