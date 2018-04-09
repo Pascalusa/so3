@@ -32,7 +32,7 @@
 
          <div class="row" style="margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;  width: 80%;">
              <div class="col m6 l6">
-                <a href="#openModal" style="position: relative; top: 7px; border: 2px solid red; border: 2px solid #abd3a7; padding: 7px; font-size: 12px; background-color: #abd3a7; color: #ffffff; font-family: 'Muli', sans-serif;"> A EMPORTER </a>
+                <a href="#openModal-livraison" style="position: relative; top: 7px; border: 2px solid red; border: 2px solid #abd3a7; padding: 7px; font-size: 12px; background-color: #abd3a7; color: #ffffff; font-family: 'Muli', sans-serif;"> A EMPORTER </a>
              </div>  
              <h5 class="col m6 l6">
                 <a href="https://deliveroo.fr/fr/" style="position: relative; bottom: 10px; border: 2px solid red; border: 2px solid #abd3a7; padding: 7px; font-size: 12px; background-color: #abd3a7; color: #ffffff; font-family: 'Muli', sans-serif;">LIVRAISON</a>
@@ -60,178 +60,10 @@
 
     <div id="openModal-livraison" class="modal-livaison">
       <div class="z-depth-5">
-        <a href="#openModal" title="Close" class="close">X</a>
-
-<a href="http://materializecss.com/icons.html" > sex</a>
-          
-             <h4 class="" style=" margin-top: 85px; font-family: 'Muli', sans-serif!important; transform: translate(-50%); left: 50%;  position: absolute;top: 77px; 
-                border-top: 2px solid; font-family: 'Muli', sans-serif;">Composez votre Lunch Bowl 
-             </h4>
-        
-              <div class="snipcart-summary" id="totalprice" style="position: absolute; transform: translate(-50%); left: 50%; font-weight: 600; top: 265px; color: black;
-                                       border-radius: 50px; background-color: white; z-index: 9; padding: 14px;">
-  
-                
-                Nombre d'ingrédient(s): <span class="snipcart-total-items"></span>
-             </div>
-        
-        <p style="text-align: center; position: relative; top: 310px;">* Choisissez 1 ingrédient parmis les 3 catégories</p>
-        
-           
-                  <div class="input-field col s12" style="position: relative; top: 356px; z-index:999; width: 231px; margin-left: auto;
-                     margin-right: auto; ">
-                      <select>
-                        <option value="" disabled selected>- <?php  echo get_cat_name(12);?> -</option>
-                         <?php
-                                         $args = array('post_per_page' => -1,
-                                           'post_type' => 'commande_en_lignes', 'cat' => 12,);
-                                          $category = new WP_Query($args);
-                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
-                                       <option style="border-bottom:#000;"><a href="http://materializecss.com/icons.html" ><?php the_title();?></option></a>
-                        <?php endwhile;?> 
-                        <option value="" disabled>- <?php  echo get_cat_name(3);?> - </option>
-                         <?php
-                                         $args = array('post_per_page' => -1,
-                                           'post_type' => 'commande_en_lignes', 'cat' => 3,);
-                                          $category = new WP_Query($args);
-                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
-                                       <option style="border-bottom:#000;"><?php the_title();?></option>
-                        <?php endwhile;?> 
-                        <option value="" disabled>- <?php  echo get_cat_name(1);?> - </option>
-                         <?php
-                                         $args = array('post_per_page' => -1,
-                                           'post_type' => 'commande_en_lignes', 'cat' => 1,);
-                                          $category = new WP_Query($args);
-                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
-                                       <option style="border-bottom:#000;"><?php the_title();?></option>
-                        <?php endwhile;?> 
-                      </select>
-                      <label></label>
-                   </div>
-                   
-                   <div>
-                        </form>
-                           <input type="submit" name="submit" value="Submit" >
-                        </form>
-                         <?php
-                                         $args = array('post_per_page' => -1,
-                                           'post_type' => 'commande_en_lignes', 'cat' => 12,);
-                                          $category = new WP_Query($args);
-                                          while (  $category -> have_posts() ) : $category -> the_post(); ?>
-
-                          <div data-position="top" id="sick" style="display: none;" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
-                                        height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>
-                          </div> 
-                      
-                        <?php endwhile;?>
-                   </div>
-
-             
-
-
-            <ul class="collection dropdown-content" id='dropdown1'>
-                <li onclick="toggleByClass('soja')" class="collection-item">Soja</li>
-                <li onclick="toggleByClass('gluten')" class="collection-item">Gluten</li>
-                <li onclick="toggleByClass('produits-laitiers')" class="collection-item">Produits <br> Laitiers</li>
-                <li onclick="toggleByClass('poisson')" class="collection-item">Poisson</li>
-                <li onclick="toggleByClass('viande')" class="collection-item">Viande</li>
-            </ul>
-
- 
-                          <!-- tab -->
-            <div class="globale-cadre">            
-              <div class="row">
-                <div class="col s12">
-                  <ul class="tabs" id="tab-commander" style="background-color: rgba(253, 253, 253, 0); height: 190px; position: relative; top: 150px; overflow-x: hidden;">
-
-<!--  <label class="dropdown-commander hide-on-large-only">
-
-  <div class="dd-button">
-    Menu
-  </div>
-
-  <input type="checkbox" class="dd-input" id="test">
-
-  <ul class="dd-menu" style="width: 150px;">
-    <li>
-      <a href="#test1"><?php  echo get_cat_name(1);?></a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="#test2"><?php  echo get_cat_name(2);?></a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="#test3"><?php  echo get_cat_name(3);?></a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="#test4"><?php  echo get_cat_name(4);?></a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="#test5"><?php  echo get_cat_name(5);?></a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="#test6"><?php  echo get_cat_name(7);?></a>
-    </li>
-  </ul>
-  
-</label>
- -->
-
-<div>
-
- 
-                    <div style="transform: translate(-50%); left: 50%; position: absolute; width: 912px; display: none;">
-
-                      <div> 
-                           <h6 class="hide-on-med-and-down" style="text-align: center; width: 95px; position: absolute; top: 99px; font-size: 1.2em; margin-right: auto;
-    margin-left: auto; font-weight: 500;">Produit</h6>
-                        <li class="tab col s3 cd hide-on-med-and-down" style=" margin-right: 52px; width: 100px; height: 100px; border-radius:100px; background-color:rgba(172, 212, 170, 0.53);"><a class="active hide-on-med-and-down" href="#test1" style="position: relative; top: 25px; right: 43px;"><i class="material-icons" style="font-size: 44px;">check_circle</i> </a></li>
-                      </div>  
-
-                      <div> 
-
-                      <li class="tab col s3 hide-on-med-and-down" style=" margin-right: 52px; width: 100px; height: 100px; border-radius:100px; background-color:rgba(172, 212, 170, 0.53);"><a class="hide-on-med-and-down" href="#test2" style="right: 43px; position: relative; top: 25px;"><i class="material-icons" style="font-size: 44px;">check_circle</i> </a></li>
-                      </div>
-
-                      <div> 
-                        <li class="tab col s3 hide-on-med-and-down" style=" margin-right: 52px; width: 100px; height: 100px; border-radius:100px; background-color:rgba(172, 212, 170, 0.53);"><a class="hide-on-med-and-down" href="#test3" style="right: 43px; position: relative; top: 25px;"><i class="material-icons" style="font-size: 44px;">check_circle</i> </a></li>
-                      </div> 
-                        
-                      <div> 
-                        <li class="tab col s3 hide-on-med-and-down" style=" margin-right: 52px; width: 100px; height: 100px; border-radius:100px; background-color:rgba(172, 212, 170, 0.53);"><a class="hide-on-med-and-down" href="#test4" style="right: 43px; position: relative; top: 25px;"><i class="material-icons" style="font-size: 44px;">check_circle</i> </a></li>
-                      </div>
-
-                      <div> 
-                          <li class="tab col s3 hide-on-med-and-down" style=" margin-right: 52px; width: 100px; height: 100px; border-radius:100px; background-color:rgba(172, 212, 170, 0.53);"><a class="hide-on-med-and-down" href="#test5" style="right: 43px; position: relative; top: 25px;"><i class="material-icons" style="font-size: 44px;" class="hide-on-med-and-down">check_circle</i> </a></li>
-                      </div>
-                      
-                      <div>    
-                        <li class="tab col s3 hide-on-med-and-down" style=" margin-right: 52px; width: 100px; height: 100px; border-radius:100px; background-color:rgba(172, 212, 170, 0.53);"><a href="#test6" hide-on-med-and-down style="position: relative; top: 25px;"><i class="material-icons " style="font-size: 44px;">check_circle</i> </a></li>
-                      </div>  
-                    </div> 
-
-                  </ul>
-                </div>
-
-<!-- Dropdown Trigger -->
-  
-
-
-  
-        
-
-                    </div>
-                </form>  
-
-
-  
-              </div>
-            </div>  
-              <!-- Fin tab -->            
+        <a href="#close" title="Close" class="close">X</a>
+         <div class="row">
+             <?php get_template_part( 'bowl');?>
+         </div>  
       </div>
     </div> 
   
@@ -468,7 +300,10 @@ background: -webkit-linear-gradient(bottom, rgb(245,245,245) 25%, rgb(232,232,23
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.35);
+  background: #06beb6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
     
     @media screen and (max-width: 400px) {

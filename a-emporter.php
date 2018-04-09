@@ -263,33 +263,36 @@
         <!--   TAB computer    -->
         
          <div class="pindicator">
+       
   <div class="bullet past">
-    <a href="#g0" data-position="top" data-delay="50" data-tooltip='Lunch Bowl' class="tooltipped"><span class="icon z-depth-3">1</span></a>
+    <a href="#g0" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(12);?>' class="tooltipped"><span class="icon z-depth-3">1</span></a>
      <!--     base     -->
   </div>
   <div class="bullet current">
-    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(12);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
+    <a href="#g1" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped"><span class="icon z-depth-3">2</span></a>
   </div>
   <div class="bullet next future">
-    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(3);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
+    <a href="#g2" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped" ><span class="icon z-depth-3">3</span></a>
   </div>
   <div class="bullet future">
-    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(1);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
+    <a href="#g3" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped"><span class="icon z-depth-3">4</span></a>
   </div>
   <div class="bullet future">
-   <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(8);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
+   <a href="#g4"  data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(9);?>' class="tooltipped" ><span class="icon z-depth-3">5</span></a>
   </div>
   <div class="bullet future">
-    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(9);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
+    <a href="#g5" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(10);?>' class="tooltipped"><span class="icon z-depth-3">6</span></a>
   </div>
    <div class="bullet future">
-    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(10);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
+    <a href="#g6" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(11);?>' class="tooltipped"><span class="icon z-depth-3">7</span></a>
   </div>     
    <div class="bullet future">
-    <a href="#g7" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(11);?>' class="tooltipped"><span class="icon z-depth-3">8</span></a>
+    <a href="#g7" data-position="top" data-delay="50" data-tooltip='<?php  echo get_cat_name(29);?>' class="tooltipped"><span class="icon z-depth-3">8</span></a>
   </div>         
                     
 </div>
+        
+      
 
         <div class="row " style="width: 100%; height: 400px!important;">
               <div class=" col s12 m12 l10" style="transform: translate(-50%)!important; left: 50%!important; position: absolute!important;">
@@ -321,35 +324,35 @@
                                         <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
                         font-weight: 700;"><a href="#g0"><i class=" material-icons" style="font-size: 10px!important;
-                                            margin-right: 4px;">keyboard_arrow_right</i>Lunch Bowl</a></li>
-                                                            <li style="    margin-bottom: 5px;
-                        font-size: 1.2em;
-                        font-weight: 700;"><a href="#g1"><i class=" material-icons" style="font-size: 10px!important;
                                             margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(12);?></a></li>
                                                             <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
-                        font-weight: 700;"><a href="#g2"><i class=" material-icons" style="font-size: 10px!important;
+                        font-weight: 700;"><a href="#g1"><i class=" material-icons" style="font-size: 10px!important;
                                             margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(3);?></a></li>
                                                             <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
-                        font-weight: 700;"><a href="#g3"><i class=" material-icons" style="font-size: 10px!important;
+                        font-weight: 700;"><a href="#g2"><i class=" material-icons" style="font-size: 10px!important;
                                             margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(1);?></a></li>
                                                             <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
-                        font-weight: 700;"><a href="#g4"><i class=" material-icons" style="font-size: 10px!important;
+                        font-weight: 700;"><a href="#g3"><i class=" material-icons" style="font-size: 10px!important;
                                             margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(8);?></a></li>
                                                             <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
-                        font-weight: 700;"><a href="#g5"><i class=" material-icons" style="font-size: 10px!important;
+                        font-weight: 700;"><a href="#g4"><i class=" material-icons" style="font-size: 10px!important;
                                             margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(9);?></a></li>
                                                             <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
-                        font-weight: 700;"><a href="#g6"><i class=" material-icons" style="font-size: 10px!important;
+                        font-weight: 700;"><a href="#g5"><i class=" material-icons" style="font-size: 10px!important;
                                             margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(10);?></a></li>
+                                                            <li style="    margin-bottom: 5px;
+                        font-size: 1.2em;
+                        font-weight: 700;"><a href="#g6"><i class=" material-icons" style="font-size: 10px!important;
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(11);?></a></li>
                            <li style="    margin-bottom: 5px;
                         font-size: 1.2em;
                         font-weight: 700;"><a href="#g7"><i class=" material-icons" style="font-size: 10px!important;
-                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(11);?></a></li>
+                                            margin-right: 4px;">keyboard_arrow_right</i><?php  echo get_cat_name(29);?></a></li>
                     
                   </ul>
                 <div>    
@@ -401,12 +404,8 @@
           </div>
     <div class="first-tab2" style="position: relative; border: 2px solid white; top: 292px;">
       
+    
       <div id="g0" class="col s12">
-          
-               <div style=""> <?php get_template_part( 'bowl');?> </div>
-          
-      </div>
-      <div id="g1" class="col s12">
        
          <?php
                // <!-- debut loop base -->
@@ -419,7 +418,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -444,7 +443,7 @@
                       <!-- debut loop -->  
       </div>
 
-      <div id="g2" class="col s12">
+      <div id="g1" class="col s12">
     <!-- debut loop veggies -->
       <?php
                        $args = array('post_per_page' => -1,
@@ -456,7 +455,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -481,7 +480,7 @@
                       <!-- debut loop -->  
       </div>
 
-      <div id="g3" class="col s12">
+      <div id="g2" class="col s12">
         <div class="row">
          <!-- debut loop proteine -->
            <?php
@@ -494,7 +493,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -520,7 +519,7 @@
         </div>        
       </div>
 
-      <div id="g4" class="col s12">
+      <div id="g3" class="col s12">
         <div class="row">
           <!-- debut loop grainesetnoix-->
            <?php
@@ -533,7 +532,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -560,7 +559,7 @@
       </div>  
 
 
-      <div id="g5" class="col s12">
+      <div id="g4" class="col s12">
         <div class="row">
            <!-- debut loop les plus -->
            <?php
@@ -573,7 +572,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -600,7 +599,7 @@
       </div>
 
 
-      <div id="g6" class="col s12">
+      <div id="g5" class="col s12">
         <div class="row">
           <?php
 
@@ -614,7 +613,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -641,7 +640,7 @@
         </div>   
       </div>
 
-      <div id="g7" class="col s12">  
+      <div id="g6" class="col s12">  
         <div class="row">
          <?php
 
@@ -655,7 +654,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
@@ -687,7 +686,7 @@
 
        // <!-- debut loop Dessert -->
                        $args = array('post_per_page' => -1,
-                         'post_type' => 'commande_en_lignes', 'cat' => 11,);
+                         'post_type' => 'commande_en_lignes', 'cat' => 29,);
                         $category = new WP_Query($args);
                         while (  $category -> have_posts() ) : $category -> the_post(); ?>
                             <!-- debut card -->
@@ -695,7 +694,7 @@
                                           <?php echo restriction_get_meta( 'restriction_poisson' );?> <?php echo restriction_get_meta( 'restriction_viande' );?>" style="background-color:; padding-top: 50px; padding-bottom: 25px; border-bottom: 2px dotted #fff; border-right: 2px dotted #fff;">
                                 <div style="padding-left: 12px; background-color: ; z-index:999; width: 117px; margin-left: auto; margin-right: auto;" class=" circle-photo">
                                      <div style=" top: 12px; margin-top: -38px;"> <p style="position: relative; top: -5px; text-align: center;"><?php the_title();?></p> </div>
-                                  <div data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
+                                  <div class="z-depth-2" data-position="top" data-delay="50" data-tooltip='<?php the_title();?>' class="tooltipped circle-cat"  class=" z-depth-3" style="  border: 4px solid white; background-color: green; height: 100px; width: 100px; border-radius: 50%; overflow:hidden;"><img style="width: 100px;
                                         height: 100px;"<?php the_post_thumbnail('medium-thumbnails'); ?>>
                                      </div> 
                                  </div>  
