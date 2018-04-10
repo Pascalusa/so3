@@ -1,34 +1,6 @@
 <?php 
-
-// Si envoyé, analyser les données du formulaire et les stockers dans les variables.
-// if(isset($_POST['submit'])) {
-
-// $name = htmlspecialchars($_POST['Nom_du_client']);
-// $mail = htmlspecialchars($_POST['E-mail_du_client']);
-// $date = htmlspecialchars($_POST['Date']);
-// $horaire = htmlspecialchars($_POST['Tranche_horaire']);
-// $menu = htmlspecialchars($_POST['menu']);
-
-// // Mosaik Créer un fichier de type 'contact'
-// $location_post = array(
-// 'post_title' =>  "$name || $mail",
-// 'post_content' => "  Nom du client :  $name 
-//                   -----------------------
-//                   Email du client : $mail  
-//                   -----------------------
-//                   Date : $date
-//                   -----------------------
-//                   Tranche horaire : $horaire 
-//                   -----------------------
-//                   Menu : $menu " ,
-// 'post_type' => "reservation",
-// 'post_status' => "publish"
-//   );
-// wp_insert_post($location_post);
-// }
-
-// ?>
-
+// <!--  l'autre partis est dans base -->
+?>
 
 <div class="globale-title1" style=" top: 120px; position: relative;  ">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hot-soup-bowl2.png" style="width: 85px;

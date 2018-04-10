@@ -1,20 +1,27 @@
+<?php 
+                        // https://www.youtube.com/watch?v=BYNLXZyn9NU  the_title();
+                        $aujourdhui = date( ' d / m / Y' );
+                        $demain = date( ' d / m / Y', time()+(24*3600) );
+                        $jour2 = date( ' d / m / Y', time()+(48*3600) );
+                        $jour3 = date( ' d / m / Y', time()+(72*3600) );
+                        $jour4 = date( ' d / m / Y ', time()+(96*3600) );
+                        $jour5 = date( ' d / m / Y ', time()+(120*3600) );
+                        $jour6 = date( ' d / m / Y ', time()+(144*3600) );
+       
+ ?>
                                 <div class="row" style="position: relative; top: 89px;">
                                            
-                                    <div style="    width: 127px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    bottom: 8px;">
+                                    <div style=" width: 127px; margin-left: auto; margin-right: auto; position: relative; bottom: 8px;">
                                                       <a href="#openModal" class="btn" style="margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px; background-color: #fcfffc63; color: rgb(255, 255, 255); border-radius: 50px;"><i style="font-size: 2rem!important;" class="material-icons">arrow_forward</i></a>
                                              
                                          
                                                          <button class="snipcart-add-item btn" data-item-id="7.7" data-item-url="<?php bloginfo('url'); ?>/commander-en-ligne/" data-item-price="9.90" data-item-name="Total lunch bowl" style="margin-left: auto;
                                                           margin-right: auto; display: block; margin-bottom: 20px; background-color: #fcfffc63; color: rgb(255, 255, 255); border-radius: 50px;"  data-item-custom1-name="Jours (Fermé le Dimanche et jours fériés)"
-                                                        data-item-custom1-options="<?php echo $aujourdhui ?>| <?php echo $demain ?>| <?php echo $jour2 ?>| <?php echo $jour3 ?>|<?php echo $jour4 ?>| <?php echo $jour5 ?>| <?php echo $jour6 ?>" data-item-custom2-name="Horaires"
+                                                        data-item-custom1-options="<?php echo $aujourdhui; ?>| <?php echo $demain; ?>| <?php echo $jour2; ?>| <?php echo $jour3; ?>|<?php echo $jour4; ?>| <?php echo $jour5; ?>| <?php echo $jour6; ?>" data-item-custom2-name="Horaires"
                                                         data-item-custom2-options="12:30 - 12:45| 12:45 - 13:00| 13:00 - 13:15| 13:15 - 13:30 |13:30 - 13:45 |13:45 - 14:00|14:15 - 14:30|14:30 - 14:45|14:45 - 15:00|15:00 - 15:15|15:15 - 15:30|15:30 - 15:45|18:00 - 18:15|18:15 - 18:30|18:30 - 18:45|18:45 - 19:00|19:00 - 19:15">Valider</button>  
                                      </div>
                                                         <h6 style="text-align: center; margin-bottom: 35px;"> * Choisissez 1 ingrédient parmi les catégories </h6>
-                                                                     <div class="hide-on-med-and-down" style="position: absolute; height: 4px; width: 100%; background-color: white; bottom: 414px;"></div>
+                                                                     <div class="hide-on-med-and-down" style="position: absolute; height: 4px; width: 100%; background-color: white;"></div>
                                   
                                   
                                   
@@ -23,7 +30,7 @@
                                           <h5 style="color:#ffffff; text-align:center;"><?php  echo get_cat_name(12);?></h5>
                                               <div class="switch">
                                                 <label style="color:#ffffff">
-                                                  Off
+                                                  Off 
                                                   <input  onclick="showprice('<?php  echo get_cat_name(12);?>');" type="checkbox">
                                                   <span class="lever"></span>
                                                   On
